@@ -12,6 +12,8 @@
 <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> 
 
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
   <!-- Tailwind CSS -->
   <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
 
@@ -497,40 +499,6 @@
 
         </div>
       </div>
-      <div class="categories mb-12">
-        <div class="flex items-center whitespace-nowrap">
-          
-          <button class="btn-prev invisible">
-            <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.315651 5.98889L6.16765 0.136888C6.36139 -0.0502164 6.6701 -0.0448444 6.85721 0.148889C7.03974 0.337879 7.03974 0.63748 6.85721 0.826441L1.34998 6.33367L6.85721 11.8409C7.0476 12.0313 7.0476 12.34 6.85721 12.5304C6.66676 12.7208 6.35807 12.7208 6.16765 12.5304L0.315651 6.67844C0.125261 6.488 0.125261 6.17931 0.315651 5.98889Z" fill="currentColor"/>
-            </svg>
-          </button>
-
-          <ul class="categories-track tags flex space-x-2 flex-grow text-gray-400">
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Real Estate</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">1 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">2 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">3 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">4 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">5 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">6 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Low capital needed</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">gigs</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-          </ul>
-          
-          <button class="btn-next">
-            <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.68435 5.98889L0.832346 0.136888C0.638613 -0.0502164 0.329897 -0.0448444 0.142793 0.148889C-0.0397396 0.337879 -0.0397396 0.63748 0.142793 0.826441L5.65002 6.33367L0.142793 11.8409C-0.0475975 12.0313 -0.0475975 12.34 0.142793 12.5304C0.33324 12.7208 0.641927 12.7208 0.832346 12.5304L6.68435 6.67844C6.87474 6.488 6.87474 6.17931 6.68435 5.98889Z" fill="currentColor"/>
-              </svg>
-          </button>
-
-        </div>
-      </div>
 
       <!-- Top courses -->
       <h2 class="h2">Top courses:</h2>
@@ -816,26 +784,126 @@
         <a href="#" class="underline">All my courses</a>
       </div>
 
-      <!-- container for all cards -->
-      <div class="container w-100 lg:w-4/5 mx-auto flex flex-col mb-10">
-        <!-- card -->
-        <div class="flex flex-col md:flex-row overflow-hidden bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2">
-          <!-- media -->
-          <div class="h-64 w-auto md:w-1/2">
-            <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/image6.jpg" />
+      <!-- Swiper -->
+      <div class="swiper mb-12">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <!-- card -->
+            <div class="flex flex-col md:flex-row overflow-hidden">
+              <!-- media -->
+              <div class="h-40 w-auto md:w-5/12 flex-shrink-0 rounded overflow-hidden">
+                <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/image6.jpg" />
+              </div>
+              <!-- content -->
+              <div class="w-full py-2 px-4 text-gray-800 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-lg font-normal leading-5 mb-2">
+                    <a href="#" class="hover:text-c-pink-hover">Complete React Ultimate Guide | eCommerce | Hooks | Redux</a>
+                  </h3>
+                  <p class="text-c-gray-dark text-xs">
+                    Elliott Thomas <span class="sep mx-4 border-l"></span> 5 lessons / 30 min 
+                  </p>
+                </div>
+                <div class="text-center">
+                  <p class="text-xs text-c-gray-dark mb-2">65% complited</p>
+                  <div class="progress-line w-full h-2 bg-c-gray-light rounded-full">
+                    <span class="progress-bar float-left h-2 bg-c-pink rounded-full" style="width: 65%;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- content -->
-          <div class="w-full py-4 px-6 text-gray-800 flex flex-col justify-between">
-            <h3 class="text-lg">Complete React Ultimate Guide | eCommerce | Hooks | Redux</h3>
-            <p class="text-c-gray-dark mt-2">
-              5 lessons <span class="sep mx-4 border-l"></span> 30 min 
-            </p>
-            <p class="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-2">
-              card.author &bull; card.date
-            </p>
+          <div class="swiper-slide">
+            <!-- card -->
+            <div class="flex flex-col md:flex-row overflow-hidden">
+              <!-- media -->
+              <div class="h-40 w-auto md:w-5/12 flex-shrink-0 rounded overflow-hidden">
+                <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/image7.jpg" />
+              </div>
+              <!-- content -->
+              <div class="w-full py-2 px-4 text-gray-800 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-lg font-normal leading-5 mb-2">
+                    <a href="#" class="hover:text-c-pink-hover">Complete React Ultimate Guide | eCommerce | Hooks | Redux</a>
+                  </h3>
+                  <p class="text-c-gray-dark text-xs">
+                    Elliott Thomas <span class="sep mx-4 border-l"></span> 5 lessons / 30 min 
+                  </p>
+                </div>
+                <div class="text-center">
+                  <p class="text-xs text-c-gray-dark mb-2">45% complited</p>
+                  <div class="progress-line w-full h-2 bg-c-gray-light rounded-full">
+                    <span class="progress-bar float-left h-2 bg-c-pink rounded-full" style="width: 45%;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div><!--/ card-->
-      </div><!--/ flex-->
+          <div class="swiper-slide">
+            <!-- card -->
+            <div class="flex flex-col md:flex-row overflow-hidden">
+              <!-- media -->
+              <div class="h-40 w-auto md:w-5/12 flex-shrink-0 rounded overflow-hidden">
+                <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/image8.jpg" />
+              </div>
+              <!-- content -->
+              <div class="w-full py-2 px-4 text-gray-800 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-lg font-normal leading-5 mb-2">
+                    <a href="#" class="hover:text-c-pink-hover">Complete React Ultimate Guide | eCommerce | Hooks | Redux</a>
+                  </h3>
+                  <p class="text-c-gray-dark text-xs">
+                    Elliott Thomas <span class="sep mx-4 border-l"></span> 5 lessons / 30 min 
+                  </p>
+                </div>
+                <div class="text-center">
+                  <p class="text-xs text-c-gray-dark mb-2">45% complited</p>
+                  <div class="progress-line w-full h-2 bg-c-gray-light rounded-full">
+                    <span class="progress-bar float-left h-2 bg-c-pink rounded-full" style="width: 45%;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <!-- card -->
+            <div class="flex flex-col md:flex-row overflow-hidden">
+              <!-- media -->
+              <div class="h-40 w-auto md:w-5/12 flex-shrink-0 rounded overflow-hidden">
+                <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/image1.jpg" />
+              </div>
+              <!-- content -->
+              <div class="w-full py-2 px-4 text-gray-800 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-lg font-normal leading-5 mb-2">
+                    <a href="#" class="hover:text-c-pink-hover">Complete React Ultimate Guide | eCommerce | Hooks | Redux</a>
+                  </h3>
+                  <p class="text-c-gray-dark text-xs">
+                    Elliott Thomas <span class="sep mx-4 border-l"></span> 5 lessons / 30 min 
+                  </p>
+                </div>
+                <div class="text-center">
+                  <p class="text-xs text-c-gray-dark mb-2">45% complited</p>
+                  <div class="progress-line w-full h-2 bg-c-gray-light rounded-full">
+                    <span class="progress-bar float-left h-2 bg-c-pink rounded-full" style="width: 45%;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">
+          <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.315651 5.98889L6.16765 0.136888C6.36139 -0.0502164 6.6701 -0.0448444 6.85721 0.148889C7.03974 0.337879 7.03974 0.63748 6.85721 0.826441L1.34998 6.33367L6.85721 11.8409C7.0476 12.0313 7.0476 12.34 6.85721 12.5304C6.66676 12.7208 6.35807 12.7208 6.16765 12.5304L0.315651 6.67844C0.125261 6.488 0.125261 6.17931 0.315651 5.98889Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.68435 5.98889L0.832346 0.136888C0.638613 -0.0502164 0.329897 -0.0448444 0.142793 0.148889C-0.0397396 0.337879 -0.0397396 0.63748 0.142793 0.826441L5.65002 6.33367L0.142793 11.8409C-0.0475975 12.0313 -0.0475975 12.34 0.142793 12.5304C0.33324 12.7208 0.641927 12.7208 0.832346 12.5304L6.68435 6.67844C6.87474 6.488 6.87474 6.17931 6.68435 5.98889Z" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
 
       <!-- Top courses in Home Based Online -->
       <h2 class="h2">Top courses in <span class="text-c-green font-semibold">Home Based Online</span></h2>
@@ -978,28 +1046,86 @@
 
       <!-- Top categories logined -->
       <h2 class="h2">Top categories (logined):</h2>
-      <!-- <div class="categories mb-12">
-        <div class="flex items-center ">
-          <ul class="tags flex space-x-2 flex-grow text-gray-400">
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">Online</a></li>
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">Real Estate</a></li>
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">Home based</a></li>
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">Online</a></li>
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">Low capital needed</a></li>
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">gigs</a></li>
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">Online</a></li>
-            <li><a href="#" class="bg-green-200 text-c-gray-dark rounded px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark">Online</a></li>
+      <div class="categories mb-12">
+        <div class="flex items-center whitespace-nowrap">
+          
+          <button class="btn-prev invisible">
+            <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.315651 5.98889L6.16765 0.136888C6.36139 -0.0502164 6.6701 -0.0448444 6.85721 0.148889C7.03974 0.337879 7.03974 0.63748 6.85721 0.826441L1.34998 6.33367L6.85721 11.8409C7.0476 12.0313 7.0476 12.34 6.85721 12.5304C6.66676 12.7208 6.35807 12.7208 6.16765 12.5304L0.315651 6.67844C0.125261 6.488 0.125261 6.17931 0.315651 5.98889Z" fill="currentColor"/>
+            </svg>
+          </button>
+
+          <ul class="categories-track tags flex space-x-2 flex-grow text-gray-400">
+            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">Real Estate</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">Home based</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">1 Home based</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">2 Home based</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">3 Home based</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">4 Home based</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">5 Home based</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">6 Home based</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">Low capital needed</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">gigs</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
+            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
           </ul>
-          <button class="categories-next rounded-full shadow-lg w-8 h-8 p-2 ml-2 text-center border flex items-center justify-center hover:bg-c-green-tag-hover hover:text-c-green disabled:text-c-gray">
+          
+          <button class="btn-next">
             <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.68435 5.98889L0.832346 0.136888C0.638613 -0.0502164 0.329897 -0.0448444 0.142793 0.148889C-0.0397396 0.337879 -0.0397396 0.63748 0.142793 0.826441L5.65002 6.33367L0.142793 11.8409C-0.0475975 12.0313 -0.0475975 12.34 0.142793 12.5304C0.33324 12.7208 0.641927 12.7208 0.832346 12.5304L6.68435 6.67844C6.87474 6.488 6.87474 6.17931 6.68435 5.98889Z" fill="currentColor"/>
-              </svg>
+            </svg>
           </button>
         </div>
-        <div class="text-right flex-grow mt-4">
-          <a href="#" class="underline hover:no-underline">View all</a>
+      </div>
+
+      <h2 class="h2">Search resaults for “<span class="text-c-green font-semibold">Ultimate Guide</span>”</h2>
+      <p class="mb-4 text-c-gray-dark">6 results</p>
+
+      <div class="inline-block relative w-40 mb-6">
+        <select name="results" id="search_results"  class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+          <option>More relevant</option>
+          <option>New new</option>
+          <option>Raiting UpToDown</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
         </div>
-      </div> -->
+      </div>
+      
+      <select name="results" id="search_results" class="hidden mb-6">
+        <option value="more relevant">More relevant</option>
+        <option value="more relevant">New new</option>
+        <option value="more relevant">Raiting UpToDown</option>
+      </select>
+
+      <div class="search-result">
+        <!-- card -->
+        <div class="flex flex-row overflow-hidden">
+          <!-- media -->
+          <div class="h-40 w-auto md:w-1/6 flex-shrink-0 rounded overflow-hidden">
+            <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/image8.jpg" />
+          </div>
+          <!-- content -->
+          <div class="flex-grow py-2 px-4 text-gray-800 flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-normal leading-5 mb-2">
+                <a href="#" class="hover:text-c-pink-hover">Complete React <span class="text-c-green font-semibold">Ultimate Guide</span> | eCommerce | Hooks | Redux</a>
+              </h3>
+              <p class="text-c-gray-dark text-xs">
+                Elliott Thomas <span class="sep mx-4 border-l"></span> 5 lessons / 30 min 
+              </p>
+            </div>
+            <div class="text-center">
+              <p class="text-xs text-c-gray-dark mb-2">65% complited</p>
+              <div class="progress-line w-full h-2 bg-c-gray-light rounded-full">
+                <span class="progress-bar float-left h-2 bg-c-pink rounded-full" style="width: 65%;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -1148,5 +1274,21 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script type="module">
+      import Swiper from '/node_modules/swiper/swiper-bundle.esm.browser.js';
+
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 2,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    </script>
 </body>
 </html>

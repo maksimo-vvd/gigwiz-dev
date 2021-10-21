@@ -255,15 +255,6 @@
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
 
-        /* overflow-x: scroll;
-        overflow-y: hidden; */
-
-        /* display: flex;
-        align-items: center; */
-
-        /* height: 100px; */
-        /* list-style: none; */
-
         /* Enable Safari touch scrolling physics which is needed for scroll snap */
         -webkit-overflow-scrolling: touch;
 
@@ -277,4 +268,15 @@
 }
 
 @tailwind components;
+@layer components {
+    .swiper-button-prev,
+    .swiper-button-next{
+        @apply w-8 h-8 rounded-full bg-white shadow text-c-gray-dark text-2xs
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        content: "";
+    }
+}
+
 @tailwind utilities;
