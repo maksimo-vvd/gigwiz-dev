@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="url" content="https://www.algolia.com/blog/engineering/how-to-implement-autocomplete-with-javascript-on-your-website/">
+  <meta name="url" content="https://github.com/algolia/autocomplete">
+  <meta name="url" content="https://www.algolia.com/doc/ui-libraries/autocomplete/introduction/sandboxes/">
+  <meta name="url" content="https://developers.google.com/maps/documentation/places/web-service/autocomplete#maps_http_places_autocomplete_amoeba-js">
+  <meta name="url" content="">
   <title>Document</title>
   
   <!-- Google fonts -->
@@ -23,9 +28,16 @@
 </head>
 <body class="antialiased flex flex-col h-screen text-base leading-tight">
 
-  <header class="header px-10 py-2 flex items-center shadow-lg relative">
+  <header class="header px-10 py-2 flex items-center shadow-lg relative justify-center lg:justify-start">
+
+    <button class="absolute top-3 left-4 lg:hidden">
+      <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#a)" fill="#D355B8"><path d="M22.5 21h-21a1.5 1.5 0 1 1 0-3h21a1.5 1.5 0 1 1 0 3ZM22.5 13.5h-21a1.5 1.5 0 1 1 0-3h21a1.5 1.5 0 1 1 0 3ZM22.5 6h-21a1.5 1.5 0 1 1 0-3h21a1.5 1.5 0 1 1 0 3Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs>
+      </svg>
+    </button>
+
     <a href="#" class="page-logo mr-4">
-      <svg class="w-72 h-20" width="172" height="35" viewBox="0 0 172 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="w-36 lg:w-72 lg:h-20" width="172" height="35" viewBox="0 0 172 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M67.9283 18.9515C68.0723 19.1677 68.1443 19.3838 68.1443 19.6721C68.1443 20.0324 68.0723 20.3206 68.0003 20.5368C67.8562 20.753 67.7122 20.8971 67.4962 21.1132C66.5599 21.7618 65.0476 22.7706 62.9591 24.2118C62.311 27.5265 61.5188 30.1206 60.5106 32.0662C59.5023 33.9397 58.2781 34.9485 56.7657 34.9485C55.9735 34.9485 55.2534 34.7324 54.7492 34.228C54.2451 33.7235 53.9571 33.075 53.9571 32.2824C53.9571 31.5618 54.1011 30.7691 54.4612 29.9765C54.8213 29.1838 55.3974 28.3191 56.3336 27.3103C57.2698 26.3015 58.5661 25.1485 60.2225 23.8515L60.2945 23.4191C58.9982 23.9235 57.7739 24.2118 56.5497 24.2118C54.7492 24.2118 53.1649 23.8515 51.7966 23.203C50.4283 22.4824 49.348 21.5456 48.6278 20.2485C47.9077 18.9515 47.4756 17.5103 47.4756 15.7809C47.4756 13.403 47.9077 11.3132 48.8439 9.51178C49.7081 7.71031 51.0044 6.26913 52.5167 5.26031C54.0291 4.25148 55.8295 3.74707 57.7739 3.74707C59.6464 3.74707 61.0147 4.17942 61.9509 5.04413C62.8871 5.90884 63.3192 7.06178 63.3192 8.50295C63.3192 9.43972 63.1752 10.2324 62.8151 10.7368C62.455 11.3132 61.9509 11.6015 61.3748 11.6015C60.9427 11.6015 60.5826 11.5294 60.3665 11.3132C60.0785 11.0971 60.0064 10.8088 60.0064 10.4485C60.0064 10.3044 60.0064 10.0162 60.0785 9.65589C60.1505 9.22354 60.2225 8.86325 60.2225 8.57501C60.2225 7.92648 60.0064 7.35001 59.6464 6.98972C59.2143 6.62942 58.5661 6.41325 57.6299 6.41325C56.4776 6.41325 55.3974 6.77354 54.3892 7.42207C53.3809 8.0706 52.5887 9.07942 52.0126 10.4485C51.4365 11.7456 51.1484 13.3309 51.1484 15.2044C51.1484 17.15 51.6525 18.5912 52.7328 19.6721C53.813 20.753 55.3254 21.2574 57.2698 21.2574C58.3501 21.2574 59.5023 21.0412 60.7266 20.5368L61.0867 17.5824H58.6381C58.206 17.5824 57.846 17.5103 57.6299 17.2941C57.4139 17.078 57.2698 16.7177 57.2698 16.2132C57.2698 15.7809 57.4139 15.4206 57.6299 15.1324C57.846 14.8441 58.206 14.7721 58.5661 14.7721H63.0311C63.3912 14.7721 63.6793 14.9162 63.8953 15.1324C64.1114 15.3485 64.1834 15.7088 64.1834 16.1412C64.1114 16.6456 63.9674 17.7985 63.6793 19.6L63.3912 21.3294C64.6875 20.3927 65.8398 19.528 66.92 18.8074C67.1361 18.6632 67.2801 18.5912 67.4962 18.5912C67.6402 18.6632 67.8562 18.8074 67.9283 18.9515ZM58.3501 31.1294C58.8542 30.1927 59.2863 28.6794 59.7184 26.5897C58.4941 27.5985 57.6299 28.5353 57.1258 29.4C56.6217 30.2647 56.3336 30.9853 56.3336 31.6338C56.3336 32.2824 56.5497 32.5706 56.9818 32.5706C57.4139 32.5706 57.846 32.0662 58.3501 31.1294Z" fill="#404041"/>
         <path d="M67.0639 22.9868C66.5598 22.2662 66.3438 21.2574 66.3438 20.0324C66.3438 19.3118 66.4158 18.375 66.6318 17.2941C66.8479 16.2133 67.0639 15.1324 67.352 14.1236C67.496 13.6191 67.7121 13.2588 67.9281 13.0427C68.1442 12.8265 68.5763 12.7544 69.0804 12.7544C69.8726 12.7544 70.3047 13.0427 70.3047 13.5471C70.3047 13.9794 70.1606 14.8441 69.8726 16.3574C69.5125 18.0868 69.2964 19.3118 69.2964 19.9603C69.2964 20.4647 69.3684 20.825 69.5125 21.0412C69.6565 21.3294 69.8726 21.4015 70.1606 21.4015C70.4487 21.4015 70.8088 21.1853 71.2409 20.825C71.673 20.3927 72.2491 19.8162 72.9693 18.9515C73.1853 18.7353 73.4014 18.5912 73.6174 18.5912C73.8335 18.5912 73.9775 18.6633 74.1215 18.8794C74.2656 19.0956 74.3376 19.3118 74.3376 19.6721C74.3376 20.3206 74.1935 20.825 73.9055 21.1853C72.3211 23.1309 70.8088 24.0677 69.4405 24.0677C68.2882 24.0677 67.568 23.7074 67.0639 22.9868ZM68.0001 10.7368C67.64 10.4486 67.496 10.0162 67.496 9.43973C67.496 8.86326 67.7121 8.43091 68.1442 8.07061C68.5763 7.71032 69.1524 7.49414 69.8005 7.49414C70.3767 7.49414 70.8808 7.63826 71.2409 7.92649C71.6009 8.21473 71.817 8.64708 71.817 9.15149C71.817 9.80002 71.601 10.3044 71.1689 10.6647C70.7368 11.025 70.2326 11.2412 69.5125 11.2412C68.8643 11.2412 68.3602 11.025 68.0001 10.7368Z" fill="#404041"/>
         <path d="M85.0684 18.9514C85.2124 19.1676 85.2124 19.3838 85.2124 19.672C85.2124 20.0323 85.1404 20.3205 85.0684 20.5367C84.9243 20.7529 84.7803 20.897 84.5643 21.1132C83.1959 22.0499 82.1877 22.6985 81.5396 23.2029L80.0272 24.2117C79.4511 27.5264 78.6589 30.1205 77.6507 31.9941C76.6424 33.8676 75.4182 34.8044 73.9058 34.8044C73.1136 34.8044 72.3935 34.5882 71.8894 34.0838C71.3852 33.5794 71.0972 32.9308 71.0972 32.1382C71.0972 30.9852 71.5293 29.7602 72.4655 28.4632C73.3297 27.1661 75.0581 25.5808 77.5066 23.6352L77.6507 22.6985C77.3626 23.1308 77.0025 23.4911 76.5704 23.7073C76.1383 23.9235 75.7062 24.0676 75.2741 24.0676C74.2659 24.0676 73.4737 23.7073 72.8976 22.9867C72.3214 22.2661 72.0334 21.3294 72.0334 20.1764C72.0334 18.8794 72.3214 17.6544 72.8976 16.5735C73.4737 15.4205 74.2659 14.4838 75.2741 13.8352C76.2824 13.1147 77.2906 12.8264 78.3708 12.8264C78.7309 12.8264 78.947 12.8985 79.091 13.0426C79.235 13.1867 79.307 13.4029 79.3791 13.7632C79.6671 13.6911 80.0272 13.6911 80.4593 13.6911C80.8914 13.6911 81.1075 13.7632 81.3235 13.8352C81.4675 13.9794 81.5396 14.1955 81.5396 14.5558C81.5396 14.772 81.5396 14.9161 81.5396 14.9882C81.4675 15.4926 81.2515 16.7176 80.9634 18.7352C80.8914 19.0955 80.8194 19.5279 80.7474 19.9602C80.6754 20.3926 80.6033 20.897 80.5313 21.4014C81.7556 20.4647 82.9799 19.5999 84.0601 18.8794C84.2762 18.7352 84.4202 18.6632 84.6363 18.6632C84.7803 18.6632 84.9243 18.8073 85.0684 18.9514ZM75.4902 31.1294C75.9943 30.1926 76.4984 28.6073 76.9305 26.5176C75.7062 27.5985 74.842 28.5352 74.2659 29.3999C73.6898 30.2647 73.4737 30.9852 73.4737 31.6338C73.4737 31.922 73.5457 32.1382 73.6177 32.2823C73.6898 32.4264 73.9058 32.5705 74.1219 32.5705C74.554 32.5705 74.9861 32.0661 75.4902 31.1294ZM77.1466 20.9691C77.5066 20.5367 77.7227 19.8882 77.8667 19.0235L78.6589 14.9161C78.0107 14.9161 77.3626 15.2044 76.8585 15.6367C76.2824 16.1411 75.8503 16.7897 75.4902 17.5823C75.1301 18.3749 74.9861 19.2397 74.9861 20.1044C74.9861 20.6088 75.0581 20.9691 75.2741 21.1852C75.4902 21.4014 75.7782 21.5455 76.0663 21.5455C76.4984 21.6897 76.8585 21.4735 77.1466 20.9691Z" fill="#404041"/>
@@ -41,7 +53,7 @@
       </svg>
     </a>
 
-    <nav class="page-navbar flex flex-grow items-center justify-between">
+    <nav class="page-navbar hidden lg:flex flex-grow items-center justify-between">
       <div class="page-navbar-links leading-relaxed space-x-16 pl-28">
         <a href="#" class="page-navbar-link no-underline">Help</a>
         <a href="#" class="page-navbar-link no-underline">Contact us</a>
@@ -57,7 +69,7 @@
         </a>
       </div>
     </nav>
-  </header>
+  </header> <!-- end header -->
 
 
   <div class="hidden relative bg-white" x-data="Components.popover({ open: true, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
@@ -429,10 +441,12 @@
 
   <div class="flex-grow">
     
-    <section class="home-promo py-20" style="background: url(assets/images/visual1.jpg) no-repeat 50% 0 / cover;">
-      <div class="container mx-auto h-80 px-4">
-        <div class="w-2/5">
-          <form action="#" class="w-full mb-16">
+    <section class="home-promo pt-10 lg:py-20 lg:bg-hero-pattern lg:bg-center lg:bg-no-repeat bg-gray-100" qqstyle="background: -moz-linear-gradient(45deg, #e9e9e9 0%, #f7f7f7 100%);
+    background: -webkit-linear-gradient(45deg, #e9e9e9 0%,#f7f7f7 100%);
+    background: linear-gradient(45deg, #e9e9e9 0%,#f7f7f7 100%);">
+      <div class="container mx-auto lg:h-80 lg:px-4">
+        <div class="lg:w-1/2 text-center lg:text-left px-4 lg:px-0">
+          <form action="#" class="w-full mb-8 lg:mb-16">
             <div class="shadow-lg flex bg-white rounded-full relative">
               <!-- <input type="text" class="flex-grow" placeholder="What do you want to learn?"> -->
               <input 
@@ -440,23 +454,26 @@
                 name="search" 
                 id="search" 
                 placeholder="What do you want to learn?"
-                class="font-light focus:outline-none focus:z-10 py-3 px-5 flex-grow rounded-full"
+                class="text-lg lg:text-2xl font-light focus:outline-none focus:z-10 py-4 px-5 flex-grow rounded-full"
               >
-              <button class="search-btn absolute top-2 right-3">
+              <button class="search-btn absolute top-4 right-4">
                 <svg width="28" height="28" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M27.7203 26.3003L22.8703 21.4603C25.0579 18.9081 26.1719 15.6078 25.9785 12.2519C25.785 8.89605 24.2992 5.74556 21.8329 3.46163C19.3665 1.17769 16.1113 -0.062113 12.7505 0.00239688C9.3897 0.0669067 6.18451 1.43072 3.80761 3.80761C1.43072 6.18451 0.0669067 9.3897 0.00239688 12.7505C-0.062113 16.1113 1.17769 19.3665 3.46163 21.8329C5.74556 24.2992 8.89605 25.785 12.2519 25.9785C15.6078 26.1719 18.9081 25.0579 21.4603 22.8703L26.3003 27.7203C26.3933 27.814 26.5039 27.8884 26.6257 27.9392C26.7476 27.99 26.8783 28.0161 27.0103 28.0161C27.1423 28.0161 27.273 27.99 27.3949 27.9392C27.5168 27.8884 27.6274 27.814 27.7203 27.7203C27.814 27.6274 27.8884 27.5168 27.9392 27.3949C27.99 27.273 28.0161 27.1423 28.0161 27.0103C28.0161 26.8783 27.99 26.7476 27.9392 26.6257C27.8884 26.5039 27.814 26.3933 27.7203 26.3003ZM13.0103 24.0103C10.8347 24.0103 8.70798 23.3652 6.89904 22.1565C5.0901 20.9478 3.68021 19.2298 2.84764 17.2198C2.01508 15.2099 1.79724 12.9981 2.22168 10.8643C2.64612 8.73053 3.69376 6.77052 5.23214 5.23214C6.77052 3.69376 8.73053 2.64612 10.8643 2.22168C12.9981 1.79724 15.2098 2.01508 17.2198 2.84764C19.2298 3.68021 20.9478 5.0901 22.1565 6.89904C23.3652 8.70798 24.0103 10.8347 24.0103 13.0103C24.0103 15.9277 22.8514 18.7256 20.7885 20.7885C18.7256 22.8514 15.9277 24.0103 13.0103 24.0103Z" fill="#49B977"/>
                 </svg>                  
               </button>
             </div>
           </form>
-          <p class="text-3xl mb-4 font-light">
-            <span class="text-green-400 font-medium block">Discover new streams of income</span>
+          <p class="text-2xl lg:text-4xl  mb-6 font-medium lg:font-light">
+            <span class="text-3xl lg:text-4xl text-green-400 font-medium block">Discover new streams of income</span>
             with experienced mentors
           </p>
-          <p class="text-5xl font-medium">
+          <p class="text-3xl lg:text-5xl font-medium">
             Courses from 
-            <span class="font-bold text-pink-600">$5.99</span>
+            <span class="font-extrabold text-pink-600">$5.99</span>
           </p>
+        </div>
+        <div class="lg:hidden mt-3 ">
+          <img class="block mx-auto" src="assets/images/visual1-mob.jpg" width="375" height="283" alt="student">
         </div>
       </div>
     </section>
@@ -466,7 +483,7 @@
       <!-- Top categories -->
       <h2 class="h2">Top categories:</h2>
       <div class="categories mb-12">
-        <div class="flex items-center whitespace-nowrap">
+        <div class="flex items-center">
           
           <button class="btn-prev invisible">
             <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -474,21 +491,21 @@
             </svg>
           </button>
 
-          <ul class="categories-track tags flex space-x-2 flex-grow text-gray-400">
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Real Estate</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">1 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">2 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">3 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">4 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">5 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">6 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Low capital needed</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">gigs</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
+          <ul class="categories-track tags h-32 lg:h-auto overflow-y-hidden">
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">Online</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">Real Estate</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">Home based</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">1 Home based</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">2 Home based</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">3 Home based</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">4 Home based</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">5 Home based</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">6 Home based</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">Online</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">Low capital needed</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">gigs</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">Online</a></li>
+            <li class="tags-item p-1 lg:p-0"><a href="#" class="tags-link tag">Online</a></li>
           </ul>
           
           <button class="btn-next">
@@ -497,6 +514,9 @@
             </svg>
           </button>
 
+        </div>
+        <div class="lg:hidden text-center py-3">
+          <a href="#" class="btn-more underline hover:no-underline">more</a>
         </div>
       </div>
 
@@ -773,9 +793,23 @@
         </div>
       </div>
 
-      <!-- Bottom banner -->
-      <div class="banner mb-8">
-        <img class="" src="assets/images/banner3.jpg" alt="desc">
+      <!-- Become a mentor banner -->
+      <div class="banner mb-8 bg-c-green-light px-4 pt-4 pb-12 lg:p-4 -mx-4 lg:mx-0 relative">
+        <div class="watermark bg-watermark absolute w-1/2 left-1/2 transform -translate-x-2/4 bottom-4 z-0 top-0 bg-bottom lg:transform-none lg:left-auto lg:w-1/4 lg:top-4 lg:bottom-4 lg:right-6 bg-no-repeat bg-contain lg:bg-center"></div>
+        <div class="flex flex-col md:flex-row overflow-hidden lg:items-center">
+          <!-- media -->
+          <div class="w-auto md:w-4/12 flex-shrink-0 rounded overflow-hidden">
+            <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/become-mentor1.png" alt="become a mentor">
+          </div>
+          <!-- content -->
+          <div class="py-4 px-4 relative ">
+            <h2 class="text-size-30 lg:text-size-45 font-extrabold leading-10 mb-6 text-c-pink">Become a mentor</h2>
+            <p class="text-size-23 lg:text-size-33 text-c-dark mb-8 lg:mb-4">Join our GigWiz mentor <br> community</p>
+            <a href="#" class="btn btn-pink w-full lg:w-auto">Start teaching today</a>
+          </div>
+        </div>
+
+
       </div>
 
       <!-- My courses -->
@@ -1044,44 +1078,10 @@
         </div>
       </div>
 
-      <!-- Top categories logined -->
-      <h2 class="h2">Top categories (logined):</h2>
-      <div class="categories mb-12">
-        <div class="flex items-center whitespace-nowrap">
-          
-          <button class="btn-prev invisible">
-            <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.315651 5.98889L6.16765 0.136888C6.36139 -0.0502164 6.6701 -0.0448444 6.85721 0.148889C7.03974 0.337879 7.03974 0.63748 6.85721 0.826441L1.34998 6.33367L6.85721 11.8409C7.0476 12.0313 7.0476 12.34 6.85721 12.5304C6.66676 12.7208 6.35807 12.7208 6.16765 12.5304L0.315651 6.67844C0.125261 6.488 0.125261 6.17931 0.315651 5.98889Z" fill="currentColor"/>
-            </svg>
-          </button>
-
-          <ul class="categories-track tags flex space-x-2 flex-grow text-gray-400">
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Real Estate</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">1 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">2 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">3 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">4 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">5 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">6 Home based</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Low capital needed</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">gigs</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-            <li class="tags-item"><a href="#" class="tags-link tag">Online</a></li>
-          </ul>
-          
-          <button class="btn-next">
-            <svg class="inline-block current" width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.68435 5.98889L0.832346 0.136888C0.638613 -0.0502164 0.329897 -0.0448444 0.142793 0.148889C-0.0397396 0.337879 -0.0397396 0.63748 0.142793 0.826441L5.65002 6.33367L0.142793 11.8409C-0.0475975 12.0313 -0.0475975 12.34 0.142793 12.5304C0.33324 12.7208 0.641927 12.7208 0.832346 12.5304L6.68435 6.67844C6.87474 6.488 6.87474 6.17931 6.68435 5.98889Z" fill="currentColor"/>
-            </svg>
-          </button>
-        </div>
-      </div>
 
       <h2 class="h2">Search resaults for “<span class="text-c-green font-semibold">Ultimate Guide</span>”</h2>
-      <p class="mb-4 text-c-gray-dark">6 results</p>
+
+      <p class="mb-6 text-c-gray-dark text-center lg:text-left">6 results</p>
 
       <div class="inline-block relative w-40 mb-6">
         <select name="results" id="search_results"  class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
@@ -1093,45 +1093,117 @@
           <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
         </div>
       </div>
-      
-      <select name="results" id="search_results" class="hidden mb-6">
-        <option value="more relevant">More relevant</option>
-        <option value="more relevant">New new</option>
-        <option value="more relevant">Raiting UpToDown</option>
-      </select>
 
       <div class="search-result">
         <!-- card -->
-        <div class="flex flex-row overflow-hidden">
+        <div class="flex qqflex-row overflow-hidden lg:items-center border-b-2 mb-10 pb-4">
           <!-- media -->
-          <div class="h-40 w-auto md:w-1/6 flex-shrink-0 rounded overflow-hidden">
-            <img class="inset-0 h-full w-full object-cover object-center" src="assets/images/image8.jpg" />
+          <div class="h-28 w-5/12 mr-4 lg:mr-0 lg:h-40 lg:w-3/12 flex-shrink-0 rounded overflow-hidden">
+            <img class="inset-0 mb-3 lg:mb-0 lg:h-full w-full object-cover object-center" src="assets/images/image8.jpg" />
+            <span class="lg:hidden text-xs text-c-gray-dark">5 lessons / 30 min</span>
           </div>
           <!-- content -->
-          <div class="flex-grow py-2 px-4 text-gray-800 flex flex-col justify-between">
+          <div class="flex-grow lg:py-2 lg:px-4 text-gray-800 flex flex-col justify-between">
             <div>
-              <h3 class="text-lg font-normal leading-5 mb-2">
+              <h3 class="text-base lg:text-lg font-normal leading-5 mb-2">
                 <a href="#" class="hover:text-c-pink-hover">Complete React <span class="text-c-green font-semibold">Ultimate Guide</span> | eCommerce | Hooks | Redux</a>
               </h3>
               <p class="text-c-gray-dark text-xs">
-                Elliott Thomas <span class="sep mx-4 border-l"></span> 5 lessons / 30 min 
+                <a href="#">Elliott Thomas</a>
+                <span class="hidden lg:inline sep mx-4 border-l"></span> 
+                <span class="hidden lg:inline">5 lessons / 30 min</span>
               </p>
             </div>
-            <div class="text-center">
-              <p class="text-xs text-c-gray-dark mb-2">65% complited</p>
-              <div class="progress-line w-full h-2 bg-c-gray-light rounded-full">
-                <span class="progress-bar float-left h-2 bg-c-pink rounded-full" style="width: 65%;"></span>
-              </div>
-            </div>
+            <div class="flex flex-col text-right items-end">
+              <span class="text-2xs text-c-gray-dark">Price:</span>
+              <p class="font-bold text-c-pink mb-2">$ 300</p>
+              <span class="hidden badge text-2xs rounded font-medium bg-c-green-dark text-white lg:inline-block p-1">Mentorship available</span>
+            </div> 
           </div>
+        </div><!-- end card -->
+        <!-- card -->
+        <div class="flex qqflex-row overflow-hidden lg:items-center border-b-2 mb-10 pb-4">
+          <!-- media -->
+          <div class="h-28 w-5/12 mr-4 lg:mr-0 lg:h-40 lg:w-3/12 flex-shrink-0 rounded overflow-hidden">
+            <img class="inset-0 mb-3 lg:mb-0 lg:h-full w-full object-cover object-center" src="assets/images/image1.jpg" />
+            <span class="lg:hidden text-xs text-c-gray-dark">5 lessons / 30 min</span>
+          </div>
+          <!-- content -->
+          <div class="flex-grow lg:py-2 lg:px-4 text-gray-800 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base lg:text-lg font-normal leading-5 mb-2">
+                <a href="#" class="hover:text-c-pink-hover">Complete React <span class="text-c-green font-semibold">Ultimate Guide</span> | eCommerce | Hooks | Redux</a>
+              </h3>
+              <p class="text-c-gray-dark text-xs">
+                <a href="#">Elliott Thomas</a>
+                <span class="hidden lg:inline sep mx-4 border-l"></span> 
+                <span class="hidden lg:inline">5 lessons / 30 min</span>
+              </p>
+            </div>
+            <div class="flex flex-col text-right items-end">
+              <span class="text-2xs text-c-gray-dark">Price:</span>
+              <p class="font-bold text-c-pink mb-2">$ 300</p>
+              <div class="hidden progress-line w-32 h-1 bg-c-gray-light rounded-full lg:inline-block">
+                <span class="progress-bar float-left h-1 bg-c-pink rounded-full" style="width: 50%;"></span>
+              </div>
+            </div> 
+          </div>
+        </div><!-- end card -->
+      </div> <!-- end search-result -->
+
+      <!-- Help Page -->
+      <h2 class="h2">Hello, how can we help?</h2>
+
+      <!-- Search form -->
+      <div class="flex items-center rounded-full shadow-xl border-2 border-green-500 mb-8">
+        <input class="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none" id="search" type="text" placeholder="Ask question">
+        
+        <button class="text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+          <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.7203 26.3003L22.8703 21.4603C25.0579 18.9081 26.1719 15.6078 25.9785 12.2519C25.785 8.89605 24.2992 5.74556 21.8329 3.46163C19.3665 1.17769 16.1113 -0.062113 12.7505 0.00239688C9.3897 0.0669067 6.18451 1.43072 3.80761 3.80761C1.43072 6.18451 0.0669067 9.3897 0.00239688 12.7505C-0.062113 16.1113 1.17769 19.3665 3.46163 21.8329C5.74556 24.2992 8.89605 25.785 12.2519 25.9785C15.6078 26.1719 18.9081 25.0579 21.4603 22.8703L26.3003 27.7203C26.3933 27.814 26.5039 27.8884 26.6257 27.9392C26.7476 27.99 26.8783 28.0161 27.0103 28.0161C27.1423 28.0161 27.273 27.99 27.3949 27.9392C27.5168 27.8884 27.6274 27.814 27.7203 27.7203C27.814 27.6274 27.8884 27.5168 27.9392 27.3949C27.99 27.273 28.0161 27.1423 28.0161 27.0103C28.0161 26.8783 27.99 26.7476 27.9392 26.6257C27.8884 26.5039 27.814 26.3933 27.7203 26.3003ZM13.0103 24.0103C10.8347 24.0103 8.70798 23.3652 6.89904 22.1565C5.0901 20.9478 3.68021 19.2298 2.84764 17.2198C2.01508 15.2099 1.79724 12.9981 2.22168 10.8643C2.64612 8.73053 3.69376 6.77052 5.23214 5.23214C6.77052 3.69376 8.73053 2.64612 10.8643 2.22168C12.9981 1.79724 15.2098 2.01508 17.2198 2.84764C19.2298 3.68021 20.9478 5.0901 22.1565 6.89904C23.3652 8.70798 24.0103 10.8347 24.0103 13.0103C24.0103 15.9277 22.8514 18.7256 20.7885 20.7885C18.7256 22.8514 15.9277 24.0103 13.0103 24.0103Z" fill="#49B977"/>
+          </svg>
+        </button>
+      </div><!-- Search form -->
+
+      <p class="text-c-dark mb-6">or choose a category to quickly find the help you need</p>
+
+      <hr>
+      Block with tags slide here
+      <hr>
+
+      <details class="accordion py-4 border-b-2" open>
+        <summary class="cursor-pointer text-c-dark text-lg relative pr-6">
+          What does LOREM mean?
+        </summary>
+        <div class="px-5 py-3">
+          Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum text has been common among typesetters since the 16th century.
         </div>
-      </div>
+      </details>
+      <details class="accordion py-4 border-b-2">
+        <summary class="cursor-pointer text-c-dark text-lg relative pr-6">
+          What does LOREM mean?
+        </summary>
+        <div class="px-5 py-3">
+          Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum text has been common among typesetters since the 16th century.
+        </div>
+      </details>
+      <details class="accordion py-4 border-b-2">
+        <summary class="cursor-pointer text-c-dark text-lg relative pr-6">
+          What does LOREM mean?
+        </summary>
+        <div class="px-5 py-3">
+          Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum text has been common among typesetters since the 16th century.
+        </div>
+      </details>
+
+      
+      <!-- End Help Page -->
 
     </div>
   </div>
 
   <footer id="footer" class="py-16 bg-black text-white text-center relative">
-    <a href="#" class="absolute bottom-20 left-10">
+    <a href="#" class="block mx-auto w-28 mb-12 lg:absolute bottom-20 left-10">
       <svg width="121" height="34" viewBox="0 0 121 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M47.9521 18.3999C48.0517 18.5499 48.1015 18.6999 48.1015 18.8999C48.1015 19.1499 48.0517 19.3499 48.0019 19.4999C47.9023 19.6499 47.8027 19.7499 47.6533 19.8999C47.006 20.3499 45.9603 21.0499 44.5163 22.0499C44.0682 24.3499 43.5204 26.1499 42.8233 27.4999C42.1262 28.7999 41.2797 29.4999 40.234 29.4999C39.6863 29.4999 39.1883 29.3499 38.8398 28.9999C38.4912 28.6499 38.292 28.1999 38.292 27.6499C38.292 27.1499 38.3916 26.5999 38.6406 26.0499C38.8896 25.4999 39.2879 24.8999 39.9352 24.1999C40.5826 23.4999 41.4789 22.6999 42.6241 21.7999L42.6739 21.4999C41.7776 21.8499 40.9311 22.0499 40.0846 22.0499C38.8398 22.0499 37.7443 21.7999 36.7982 21.3499C35.8521 20.8499 35.1052 20.1999 34.6073 19.2999C34.1093 18.3999 33.8105 17.3999 33.8105 16.1999C33.8105 14.5499 34.1093 13.0999 34.7566 11.8499C35.3542 10.5999 36.2505 9.59985 37.2961 8.89985C38.3418 8.19985 39.5867 7.84985 40.9311 7.84985C42.2258 7.84985 43.1719 8.14985 43.8192 8.74985C44.4665 9.34985 44.7653 10.1499 44.7653 11.1499C44.7653 11.7999 44.6657 12.3499 44.4167 12.6999C44.1677 13.0999 43.8192 13.2999 43.4208 13.2999C43.1221 13.2999 42.8731 13.2499 42.7237 13.0999C42.5245 12.9499 42.4747 12.7499 42.4747 12.4999C42.4747 12.3999 42.4747 12.1999 42.5245 11.9499C42.5743 11.6499 42.6241 11.3999 42.6241 11.1999C42.6241 10.7499 42.4747 10.3499 42.2258 10.0999C41.927 9.84985 41.4789 9.69985 40.8315 9.69985C40.0348 9.69985 39.2879 9.94985 38.5908 10.3999C37.8937 10.8499 37.3459 11.5499 36.9476 12.4999C36.5492 13.3999 36.3501 14.4999 36.3501 15.7999C36.3501 17.1499 36.6986 18.1499 37.4455 18.8999C38.1924 19.6499 39.2381 19.9999 40.5826 19.9999C41.3295 19.9999 42.1262 19.8499 42.9727 19.4999L43.2217 17.4499H41.5287C41.2299 17.4499 40.9809 17.3999 40.8315 17.2499C40.6821 17.0999 40.5826 16.8499 40.5826 16.4999C40.5826 16.1999 40.6821 15.9499 40.8315 15.7499C40.9809 15.5499 41.2299 15.4999 41.4789 15.4999H44.5661C44.8151 15.4999 45.0142 15.5999 45.1636 15.7499C45.313 15.8999 45.3628 16.1499 45.3628 16.4499C45.313 16.7999 45.2134 17.5999 45.0142 18.8499L44.8151 20.0499C45.7114 19.3999 46.5081 18.7999 47.255 18.2999C47.4044 18.1999 47.504 18.1499 47.6533 18.1499C47.7529 18.1999 47.9023 18.2999 47.9521 18.3999ZM41.3295 26.8499C41.678 26.1999 41.9768 25.1499 42.2756 23.6999C41.4291 24.3999 40.8315 25.0499 40.483 25.6499C40.1344 26.2499 39.9352 26.7499 39.9352 27.1999C39.9352 27.6499 40.0846 27.8499 40.3834 27.8499C40.6821 27.8499 40.9809 27.4999 41.3295 26.8499Z" fill="#E5E5E5"/>
         <path d="M47.3544 21.2C47.0058 20.7 46.8564 20 46.8564 19.15C46.8564 18.65 46.9062 18 47.0556 17.25C47.205 16.5 47.3544 15.75 47.5536 15.05C47.6532 14.7 47.8025 14.45 47.9519 14.3C48.1013 14.15 48.4001 14.1 48.7486 14.1C49.2964 14.1 49.5951 14.3 49.5951 14.65C49.5951 14.95 49.4955 15.55 49.2964 16.6C49.0474 17.8 48.898 18.65 48.898 19.1C48.898 19.45 48.9478 19.7 49.0474 19.85C49.147 20.05 49.2964 20.1 49.4955 20.1C49.6947 20.1 49.9437 19.95 50.2425 19.7C50.5412 19.4 50.9396 19 51.4375 18.4C51.5869 18.25 51.7363 18.15 51.8857 18.15C52.035 18.15 52.1346 18.2 52.2342 18.35C52.3338 18.5 52.3836 18.65 52.3836 18.9C52.3836 19.35 52.284 19.7 52.0848 19.95C50.9894 21.3 49.9437 21.95 48.9976 21.95C48.2009 21.95 47.7029 21.7 47.3544 21.2ZM48.0017 12.7C47.7527 12.5 47.6532 12.2 47.6532 11.8C47.6532 11.4 47.8025 11.1 48.1013 10.85C48.4001 10.6 48.7984 10.45 49.2466 10.45C49.6449 10.45 49.9935 10.55 50.2425 10.75C50.4914 10.95 50.6408 11.25 50.6408 11.6C50.6408 12.05 50.4914 12.4 50.1927 12.65C49.8939 12.9 49.5453 13.05 49.0474 13.05C48.5992 13.05 48.2507 12.9 48.0017 12.7Z" fill="#E5E5E5"/>
@@ -1283,6 +1355,7 @@
         // Optional parameters
         direction: 'horizontal',
         slidesPerView: 2,
+        initialSlide: 1,
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",

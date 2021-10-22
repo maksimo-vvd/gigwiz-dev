@@ -1,4 +1,23 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+
+    const mediaQueryList = window.matchMedia("(max-width: 767.98px)")
+    let isMobile = mediaQueryList.matches
+    console.log('load isMobile', isMobile);
+
+    function screenTest(e) {
+        if (e.matches) {
+            /* the viewport is 600 pixels wide or less */
+            isMobile = e.matches
+            console.log('if isMobile', isMobile);
+        } else {
+            /* the viewport is more than 600 pixels wide */
+            isMobile = e.matches
+            console.log('else isMobile', isMobile);
+        }
+    }
+    
+    mediaQueryList.addEventListener('change', screenTest);
+
         
     const categories = document.querySelectorAll(".categories")
 
@@ -81,6 +100,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
             function scrollToPrevTag() {
                 categoriesTrack.scrollBy(-categoriesTrackSize, 0);
             }
+
+            // if (isMobile) {
+                const btnMore = element.querySelector('.btn-more')
+                console.log(3, btnMore);
+
+                btnMore.addEventListener('click', (e)=> {
+                    e.preventDefault()
+                    if (categoriesTrack.classList.contains('overflow-y-hidden') && categoriesTrack.classList.contains('h-32')) {
+                        categoriesTrack.classList.remove('h-32')
+                        e.target.innerHTML = 'less'
+                    } else {
+                        categoriesTrack.classList.add('h-32')
+                        e.target.innerHTML = 'more'
+                    }
+                })
+            // }
         });
     }
 })

@@ -38,7 +38,23 @@ module.exports = {
       },
       fontSize: {
         '2xs': ['0.625rem', { lineHeight: '0.875rem' }],
+        'size-45': ['2.813rem', { lineHeight: '1.25' }],
+        'size-36': ['2.25rem', { lineHeight: '1.25' }],
+        'size-33': ['2.063rem', { lineHeight: '1.25' }],
+        'size-30': ['1.875rem', { lineHeight: '1.25' }],
+        'size-25': ['1.5625rem', { lineHeight: '1.25' }],
+        'size-23': ['1.438rem', { lineHeight: '1.25' }],
+        'size-15': ['0.938rem', { lineHeight: '1.25' }],
       },
+      lineHeight: {
+        'zero': '0',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/assets/images/visual1.jpg')",
+        'hero-pattern-mob': "url('/assets/images/visual1-mob.jpg')",
+        'watermark': "url('/assets/images/gw-watermark.png')",
+        // 'footer-texture': "url('/img/footer-texture.png')",
+      }
     },
     screens: {
       sm: '640px',
