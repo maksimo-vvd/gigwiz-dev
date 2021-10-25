@@ -1229,6 +1229,23 @@ a.disabled, a[disabled] {
   color: var(--clr-pink)
 }
 
+.form-field small {
+  display: none
+}
+
+.form-field.error small{
+  display: block
+}
+
+.form-field.error input {
+  --tw-border-opacity: 1;
+  border-color: rgba(248, 113, 113, var(--tw-border-opacity))
+}
+
+.form-field.success input, .form-field.success textarea {
+  border-color: var(--clr-green);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -29102,6 +29119,20 @@ a.disabled, a[disabled] {
 .content-none {
   content: none;
 }
+
+/* 
+input:invalid {
+    @apply border-red-400
+}
+
+input:invalid:required {
+    @apply bg-red-50
+}
+
+input:valid {
+    @apply border-c-green
+}
+*/
 
 @media (min-width: 640px) {
   .sm\:container {

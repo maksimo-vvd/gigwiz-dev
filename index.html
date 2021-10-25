@@ -1194,10 +1194,38 @@
         <div class="px-5 py-3">
           Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum text has been common among typesetters since the 16th century.
         </div>
-      </details>
+      </details><!-- End Help Page -->
 
+      <br><br><br>
+
+      <!-- Contact us -->
+      <h2 class="h2">Hello, how can we help?</h2>
       
-      <!-- End Help Page -->
+      <form name="contact_form" id="contact_form" action="/" method="post" class="mb-8">
+        <!-- <div class="success_box">All of the fields were successfully validated!</div>
+        <div class="error_box"></div> -->
+        <div class="form-field">
+          <label for="email" class="text-c-dark font-medium">Your email *</label>
+          <input name="contact-email" id="email" class="w-full border-c-gray border-2 mt-2 text-c-gray-dark p-3 rounded focus:outline-none focus:shadow-outline"
+          type="text" placeholder="Insert yor email" qqrequired>
+          <small class="block text-red-600 bg-red-100 p-2"></small>
+        </div> 
+        <div class="form-field mt-6">
+          <label for="name" class="text-c-dark font-medium">Your Name</label>
+          <input id="name" class="w-full border-c-gray border-2 mt-2 text-c-gray-dark p-3 rounded focus:outline-none focus:shadow-outline"
+          type="text" placeholder="Insert Your Name">
+        </div> 
+        <div class="form-field mt-6">
+          <label for="msg" class="text-c-dark font-medium">Your message *</label>
+          <textarea name="contact-message" id="msg" class="block w-full h-32 border-c-gray border-2 mt-2 text-c-gray-dark p-3 rounded focus:outline-none focus:shadow-outline" qqrequired placeholder="Insert text"></textarea>
+          <small class="block text-red-600 bg-red-100 p-2"></small>
+        </div>
+        <div class="mt-8 text-right">
+          <button type="submit" id="contact-submit" class="capitalize btn btn-pink w-full lg:w-40 p-3 rounded">send</button>
+        </div>
+      </form>
+    
+      <!-- End Contact us -->
 
     </div>
   </div>
@@ -1363,5 +1391,7 @@
         }
       });
     </script>
+
+  <script type="text/javascript" src="assets/js/libs/validate.js"></script>
 </body>
 </html>

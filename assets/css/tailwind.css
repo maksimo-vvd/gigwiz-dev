@@ -205,6 +205,8 @@
         font-style: italic;
         font-display: swap;
     }
+}
+@layer base {
     body {
         @apply font-poppins
     }
@@ -306,6 +308,33 @@
         content: "\2303";
         @apply absolute top-6 right-2 text-c-pink text-3xl leading-zero
     }
+    .form-field small {
+        @apply hidden
+    }
+    .form-field.error small{
+        @apply block
+    }
+    .form-field.error input {
+        @apply border-red-400
+    }
+    .form-field.success input,
+    .form-field.success textarea {
+        @apply border-c-green
+    }
 }
 
 @tailwind utilities;
+
+/* 
+input:invalid {
+    @apply border-red-400
+}
+
+input:invalid:required {
+    @apply bg-red-50
+}
+
+input:valid {
+    @apply border-c-green
+}
+*/

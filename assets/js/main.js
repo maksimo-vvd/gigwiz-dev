@@ -2,17 +2,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const mediaQueryList = window.matchMedia("(max-width: 767.98px)")
     let isMobile = mediaQueryList.matches
-    console.log('load isMobile', isMobile);
+    // console.log('load isMobile', isMobile);
 
     function screenTest(e) {
         if (e.matches) {
             /* the viewport is 600 pixels wide or less */
             isMobile = e.matches
-            console.log('if isMobile', isMobile);
+            // console.log('if isMobile', isMobile);
         } else {
             /* the viewport is more than 600 pixels wide */
             isMobile = e.matches
-            console.log('else isMobile', isMobile);
+            // console.log('else isMobile', isMobile);
         }
     }
     
@@ -103,7 +103,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             // if (isMobile) {
                 const btnMore = element.querySelector('.btn-more')
-                console.log(3, btnMore);
 
                 btnMore.addEventListener('click', (e)=> {
                     e.preventDefault()
@@ -118,4 +117,134 @@ window.addEventListener('DOMContentLoaded', (event) => {
             // }
         });
     }
+
+    // https://www.w3resource.com/javascript/form/email-validation.php
+    // https://codepen.io/joyshaheb/pen/XWgdOyY?editors=1010
+    // https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/
+    function ValidateEmail(inputText) {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(inputText.value.match(mailformat)) {
+            alert("Valid email address!");
+            document.form1.text1.focus();
+            return true;
+        } else {
+            alert("You have entered an invalid email address!");
+            document.form1.text1.focus();
+            return false;
+        }
+    }
+
+    // Contact form validation
+    const contactForm = document.querySelector('#contact_form')
+    const contactFormEmail = contactForm.querySelector('#email')
+    const contactFormMsg = contactForm.querySelector('#msg')
+    const contactFormSubmit = contactForm.querySelector('#contact-submit')
+
+    const checkTextArea = () => {
+
+        let valid = false;
+    
+        const min = 3,
+            max = 500;
+    
+        const msg = contactFormMsg.value.trim();
+    
+        if (!isRequired(msg)) {
+            showError(contactFormMsg, 'Message cannot be blank.');
+        } else if (!isBetween(msg.length, min, max)) {
+            showError(contactFormMsg, `Message must be between ${min} and ${max} characters.`)
+        } else {
+            showSuccess(contactFormMsg);
+            valid = true;
+        }
+        return valid;
+    };
+
+    const checkEmail = () => {
+        let valid = false;
+        const email = contactFormEmail.value.trim();
+        if (!isRequired(email)) {
+            showError(contactFormEmail, 'Email cannot be blank.');
+        } else if (!isEmailValid(email)) {
+            showError(contactFormEmail, 'Email is not valid.')
+        } else {
+            showSuccess(contactFormEmail);
+            valid = true;
+        }
+        return valid;
+    }
+
+    const isEmailValid = (email) => {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    const isRequired = value => value === '' ? false : true
+    const isBetween = (length, min, max) => length < min || length > max ? false : true;
+
+    const showError = (input, message) => {
+        // get the form-field element
+        const formField = input.parentElement;
+        // add the error class
+        formField.classList.remove('success');
+        formField.classList.add('error');
+    
+        // show the error message
+        const error = formField.querySelector('small');
+        error.textContent = message;
+    };
+    
+    const showSuccess = (input) => {
+        // get the form-field element
+        const formField = input.parentElement;
+    
+        // remove the error class
+        formField.classList.remove('error');
+        formField.classList.add('success');
+    
+        // hide the error message
+        const error = formField.querySelector('small');
+        error.textContent = '';
+    }
+
+    contactForm.addEventListener('submit', function (e) {
+        // prevent the form from submitting
+        e.preventDefault();
+    
+        // validate fields
+        let isTextAreaValid = checkTextArea(),
+            isEmailValid = checkEmail()
+    
+        let isFormValid = isTextAreaValid && isEmailValid
+    
+        // submit to the server if the form is valid
+        if (isFormValid) {
+            contactForm.submit()
+        }
+    })
+
+    const debounce = (fn, delay = 500) => {
+        let timeoutId;
+        return (...args) => {
+            // cancel the previous timer
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            // setup a new timer
+            timeoutId = setTimeout(() => {
+                fn.apply(null, args)
+            }, delay);
+        };
+    }
+
+    contactForm.addEventListener('input', debounce(function (e) {
+        switch (e.target.id) {
+            case 'msg':
+                checkTextArea();
+                break;
+            case 'email':
+                checkEmail();
+                break;
+        }
+    }))
 })
