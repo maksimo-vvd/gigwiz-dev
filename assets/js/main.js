@@ -118,27 +118,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
+    // Contact form validation
+
     // https://www.w3resource.com/javascript/form/email-validation.php
     // https://codepen.io/joyshaheb/pen/XWgdOyY?editors=1010
     // https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/
-    function ValidateEmail(inputText) {
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if(inputText.value.match(mailformat)) {
-            alert("Valid email address!");
-            document.form1.text1.focus();
-            return true;
-        } else {
-            alert("You have entered an invalid email address!");
-            document.form1.text1.focus();
-            return false;
-        }
-    }
 
-    // Contact form validation
     const contactForm = document.querySelector('#contact_form')
     const contactFormEmail = contactForm.querySelector('#email')
     const contactFormMsg = contactForm.querySelector('#msg')
-    const contactFormSubmit = contactForm.querySelector('#contact-submit')
 
     const checkTextArea = () => {
 
