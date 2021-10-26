@@ -1026,6 +1026,7 @@ module.exports = {
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
   plugins: [
+    require('@tailwindcss/custom-forms'),
     plugin(({ addVariant, e }) => {
         addVariant('label-checked', ({ modifySelectors, separator }) => {
             modifySelectors(

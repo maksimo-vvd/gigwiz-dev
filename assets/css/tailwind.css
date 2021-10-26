@@ -327,6 +327,27 @@
     .nav-mobile-sep{
         @apply  border-t border-gray-500 my-3
     }
+    .btn-tab{
+        @apply flex-grow text-size-23 hover:text-c-dark
+    }
+    .btn-tab::after{
+        content: '';
+        @apply mt-2 block rounded-full h-1.5 bg-c-gray-light
+    }
+    .btn-tab:hover:after{
+        @apply bg-c-gray-dark
+    }
+    /* TODO move to plugin ??? */
+    .btn-tab-complited,
+    .btn-tab-active{
+        @apply text-c-dark
+    }
+    .btn-tab-complited::after{
+        @apply bg-c-green
+    }
+    .btn-tab-active::after{
+        @apply bg-c-pink
+    }
 }
 
 @tailwind utilities;
