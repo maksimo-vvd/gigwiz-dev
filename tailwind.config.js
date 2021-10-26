@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   purge: [],
@@ -53,6 +54,7 @@ module.exports = {
         'hero-pattern': "url('/assets/images/visual1.jpg')",
         'hero-pattern-mob': "url('/assets/images/visual1-mob.jpg')",
         'watermark': "url('/assets/images/gw-watermark.png')",
+        'x': "url('/assets/images/gw-x.png')",
         // 'footer-texture': "url('/img/footer-texture.png')",
       }
     },
@@ -875,8 +877,8 @@ module.exports = {
   ],
   variants: {
     extend: {
-      textColor: ['disabled'],
-      backgroundColor: ['disabled'],
+      textColor: ['disabled', 'label-checked'],
+      backgroundColor: ['disabled', 'label-checked'],
       cursor: ['disabled'],
     },
     accessibility: ['responsive', 'focus-within', 'focus'],
@@ -1023,5 +1025,17 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addVariant, e }) => {
+        addVariant('label-checked', ({ modifySelectors, separator }) => {
+            modifySelectors(
+                ({ className }) => {
+                    const eClassName = e(`label-checked${separator}${className}`); // escape class
+                    const yourSelector = 'input[type="checkbox"]'; // your input selector. Could be any
+                    return `${yourSelector}:checked ~ .${eClassName}`; // ~ - CSS selector for siblings
+                }
+            )
+        })
+    }),
+  ],
 }

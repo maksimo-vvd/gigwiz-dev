@@ -30,7 +30,7 @@
 
   <header class="header px-10 py-2 flex items-center shadow-lg relative justify-center lg:justify-start">
 
-    <button class="absolute top-3 left-4 lg:hidden">
+    <button id="menu_control_open" class="absolute top-3 left-4 lg:hidden">
       <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#a)" fill="#D355B8"><path d="M22.5 21h-21a1.5 1.5 0 1 1 0-3h21a1.5 1.5 0 1 1 0 3ZM22.5 13.5h-21a1.5 1.5 0 1 1 0-3h21a1.5 1.5 0 1 1 0 3ZM22.5 6h-21a1.5 1.5 0 1 1 0-3h21a1.5 1.5 0 1 1 0 3Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs>
       </svg>
@@ -71,16 +71,21 @@
     </nav>
 
 
-    <nav class="page-navbar-mobile fixed top-0 bottom-0 left-0 w-4/5 bg-white shadow-lg z-20">
-      <a href="#" class="block">Login</a>
-      <a href="#" class="block">Sign up</a>
-      <span class="sep block h-0.5 bg-gray-500"></span>
-      <a href="#" class="">Finde a course</a>
-      <span class="sep"></span>
-      <a href="#" class="btn btn-pink w-full">Become a teacher</a>
-      <span class="sep"></span>
-      <a href="#" class="">Help</a>
-      <a href="#" class="">Contact us</a>
+    <nav class="page-nav-mobile nav-mobile fixed top-0 bottom-0 left-0 w-4/5 bg-white shadow-2xl z-20 text-lg pt-10 overflow-y-auto hidden">
+      <button id="menu_control_close" class="btn-close absolute top-4 right-4 ">
+        <svg class="w-4 h-4" width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.0896 3.50225L0.0889869 0.501636C-0.0268245 0.389788 -0.030035 0.205242 0.0818129 0.0894308C0.193661 -0.0263801 0.378207 -0.0295913 0.494018 0.0822567C0.496443 0.0845968 0.498835 0.0869882 0.501192 0.0894308L3.50182 3.09004L6.50244 0.0894137C6.61825 -0.0224343 6.80279 -0.019223 6.91464 0.0965879C7.02376 0.209563 7.02376 0.38866 6.91464 0.501636L3.91403 3.50225L6.91464 6.50286C7.02845 6.61669 7.02845 6.80124 6.91464 6.91507C6.80081 7.02886 6.61627 7.02886 6.50244 6.91507L3.50182 3.91445L0.501209 6.91507C0.385398 7.02691 0.200852 7.0237 0.089004 6.90789C-0.0200939 6.79492 -0.0200939 6.61582 0.089004 6.50286L3.0896 3.50225Z" fill="#2F2C2D"/>
+        </svg>
+      </button>
+      <a href="#" class="nav-mobile-link">Login</a>
+      <a href="#" class="nav-mobile-link">Sign up</a>
+      <div class="nav-mobile-sep"></div>
+      <a href="#" class="nav-mobile-link">Finde a course</a>
+      <div class="nav-mobile-sep"></div>
+      <a href="#" class="btn btn-pink block m-4">Become a teacher</a>
+      <div class="nav-mobile-sep"></div>
+      <a href="#" class="nav-mobile-link">Help</a>
+      <a href="#" class="nav-mobile-link">Contact us</a>
     </nav>
   </header> <!-- end header -->
 
@@ -118,7 +123,7 @@
 
     <nav class="page-navbar hidden lg:flex flex-grow space-x-4 items-center justify-between">
 
-      <form action="/" class="flex-grow">
+      <form action="/" class="live-search-form flex-grow">
         <div class="flex bg-white rounded-full relative border-2 border-c-green">
           <!-- <input type="text" class="flex-grow" placeholder="What do you want to learn?"> -->
           <input 
@@ -134,11 +139,10 @@
             </svg>                  
           </button>
           <div class="live-search-drop-down absolute bg-white border-2 border-c-green rounded-3xl -left-0.5 -right-0.5 -top-0.5 overflow-hidden pb-2">
-            <button class="live-search-close absolute top-3 right-3 ">
+            <button class="btn-close absolute top-3 right-3 ">
               <svg class="w-4 h-4" width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.0896 3.50225L0.0889869 0.501636C-0.0268245 0.389788 -0.030035 0.205242 0.0818129 0.0894308C0.193661 -0.0263801 0.378207 -0.0295913 0.494018 0.0822567C0.496443 0.0845968 0.498835 0.0869882 0.501192 0.0894308L3.50182 3.09004L6.50244 0.0894137C6.61825 -0.0224343 6.80279 -0.019223 6.91464 0.0965879C7.02376 0.209563 7.02376 0.38866 6.91464 0.501636L3.91403 3.50225L6.91464 6.50286C7.02845 6.61669 7.02845 6.80124 6.91464 6.91507C6.80081 7.02886 6.61627 7.02886 6.50244 6.91507L3.50182 3.91445L0.501209 6.91507C0.385398 7.02691 0.200852 7.0237 0.089004 6.90789C-0.0200939 6.79492 -0.0200939 6.61582 0.089004 6.50286L3.0896 3.50225Z" fill="#2F2C2D"/>
-                </svg>
-                
+              </svg>
             </button>
             <div class="list-none whitespace-nowrap">
               <div class="py-3 px-5 truncate font-semibold live-search-placeholder">Ultim item</div>
@@ -204,7 +208,7 @@
   </header> <!-- end header logged user -->
 
 
-  <div class="hidden relative bg-white" x-data="Components.popover({ open: true, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+  <div style="display: none;" class="hidden relative bg-white" x-data="Components.popover({ open: true, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
@@ -1334,8 +1338,6 @@
       <h2 class="h2">Hello, how can we help?</h2>
       
       <form name="contact_form" id="contact_form" action="/" method="post" class="mb-8">
-        <!-- <div class="success_box">All of the fields were successfully validated!</div>
-        <div class="error_box"></div> -->
         <div class="form-field">
           <label for="email" class="text-c-dark font-medium">Your email *</label>
           <input name="contact-email" id="email" class="w-full border-c-gray border-2 mt-2 text-c-gray-dark p-3 rounded focus:outline-none focus:shadow-outline"

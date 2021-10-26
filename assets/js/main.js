@@ -235,4 +235,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 break;
         }
     }))
+
+    const btnOpenMenuHandler = document.getElementById('menu_control_open')
+    const btnCloseMenuHandler = document.getElementById('menu_control_close')
+    const pageNavMobile = document.querySelector('.page-nav-mobile')
+
+    btnOpenMenuHandler.addEventListener('click', function (ev) {
+        pageNavMobile.classList.remove('hidden')
+    })
+    btnCloseMenuHandler.addEventListener('click', function (ev) {
+        pageNavMobile.classList.add('hidden')
+    })
 })

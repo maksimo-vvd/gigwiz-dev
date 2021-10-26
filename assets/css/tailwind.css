@@ -244,7 +244,7 @@
         @apply text-c-gray-dark pointer-events-none cursor-not-allowed
     }
     .tag {
-        @apply text-size-15 bg-green-200 inline-block text-c-gray-dark rounded px-4 lg:px-8 py-2 no-underline hover:bg-c-green-tag-hover hover:text-c-gray-dark whitespace-nowrap
+        @apply text-size-15 bg-green-200 inline-block text-c-gray-dark rounded px-3 lg:px-8 py-2 no-underline hover:bg-c-pink hover:text-white whitespace-nowrap
     }
     .categories .btn-prev,
     .categories .btn-next{
@@ -321,20 +321,12 @@
     .form-field.success textarea {
         @apply border-c-green
     }
+    .nav-mobile-link{
+        @apply  block px-4 py-2
+    }
+    .nav-mobile-sep{
+        @apply  border-t border-gray-500 my-3
+    }
 }
 
 @tailwind utilities;
-
-/* 
-input:invalid {
-    @apply border-red-400
-}
-
-input:invalid:required {
-    @apply bg-red-50
-}
-
-input:valid {
-    @apply border-c-green
-}
-*/

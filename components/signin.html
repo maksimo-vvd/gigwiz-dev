@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration step 1</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    
+    <!--Overlay Effect-->
+    <div
+        class="fixed qqhidden inset-0 bg-white bg-opacity-50 overflow-y-auto h-full w-full"
+        id="my-modal"
+    >
+        <!--modal content-->
+        <div
+            class="relative top-20 mx-auto p-5 py-8 border w-96 shadow-lg rounded-md bg-white"
+        >
+            <div class="h2 text-center">Sign in</div>
+            <form action="/" method="post" class="mb-6 px-6">
+                <div class="form-field mb-4">
+                    <label for="email" class="text-c-dark font-medium">Email address</label>
+                    <input name="contact-email" id="email" class="w-full border-c-gray border-2 mt-2 text-c-gray-dark p-3 rounded focus:outline-none focus:shadow-outline"
+                    type="email" placeholder="Insert yor email">
+                </div>
+                <div class="form-field mb-6">
+                    <label for="msg" class="text-c-dark font-medium">Password</label>
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 right-3 flex items-center px-2 cursor-pointer">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_420:14042)">
+                                <path d="M20.8797 10.852C19.1236 14.5492 15.1303 17.8828 10.459 17.8828C5.2029 17.8828 1.42481 13.7712 0.038292 10.852C-0.0674515 10.6293 -0.0674515 10.3707 0.038292 10.148C1.79444 6.45082 5.78769 3.11717 10.459 3.11717C15.7151 3.11717 19.4932 7.22899 20.8797 10.148C20.9854 10.3707 20.9854 10.6293 20.8797 10.852ZM10.459 4.7578C6.67979 4.7578 3.54641 7.24838 1.7084 10.5C3.53872 13.7383 6.67017 16.2422 10.459 16.2422C14.2379 16.2422 17.3716 13.7519 19.2096 10.5C17.3793 7.26184 14.2478 4.7578 10.459 4.7578ZM10.459 14.6016C8.19736 14.6016 6.35743 12.7616 6.35743 10.5C6.35743 8.23836 8.19736 6.39843 10.459 6.39843C12.7206 6.39843 14.5606 8.23836 14.5606 10.5C14.5606 12.7616 12.7206 14.6016 10.459 14.6016ZM10.459 8.03905C9.10211 8.03905 7.99805 9.14311 7.99805 10.5C7.99805 11.857 9.10211 12.9609 10.459 12.9609C11.816 12.9609 12.9199 11.857 12.9199 10.5C12.9199 9.14311 11.816 8.03905 10.459 8.03905Z" fill="#C0CFCE"/>
+                                </g>
+                                <line x1="2.09439" y1="3.69582" x2="19.3444" y2="16.4458" stroke="#C0CFCE" stroke-width="2"/>
+                                <defs>
+                                <clipPath id="clip0_420:14042">
+                                <rect width="21" height="21" fill="white" transform="matrix(1 0 0 -1 0 21)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                            
+                        </div>
+                        <input class="appearance-none border-2 rounded w-full py-3 pl-3 leading-tight border-gray-300 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16" type="password">
+                    </div>
+                </div>
+                <div class="mt-8 flex items-center justify-between">
+                    <button type="button" class="capitalize btn btn-pink">Sign in</button>
+                    <a href="#" class="text-c-pink underline hover:no-underline">Forgot password</a>
+                </div>  
+            </form>
+            <p class="text-center mb-3">or sign in with</p>
+            <div class="mb-5 flex space-x-3 justify-center">
+                <a href="#">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.2713 18.648L32.6357 18.6497C30.569 18.6497 30.1683 19.6315 30.1683 21.0718V24.2498H35.098L34.4557 29.2285H30.1683V42H25.0285V29.2285H20.7305V24.2498H25.0285V20.58C25.0285 16.3188 27.6307 14 31.43 14C33.25 14 34.8145 14.1348 35.2713 14.196V18.648ZM28 0C12.537 0 0 12.5352 0 28C0 43.463 12.537 56 28 56C43.4647 56 56 43.463 56 28C56 12.5352 43.4647 0 28 0Z" fill="#3B5998"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28 0C43.4 0 56 12.6 56 28C56 43.4 43.4 56 28 56C12.6 56 0 43.3998 0 28C0 12.6002 12.6 0 28 0Z" fill="#DD4B39"/>
+                        <path d="M42.1746 23.275V26.425H45.3245V29.5751H42.1746V32.7251H39.0246V29.5751H35.8745V26.425H39.0246V23.275H42.1746Z" fill="white"/>
+                        <path d="M13.8248 35.8749C9.62476 31.6749 9.62476 24.3248 13.9997 20.125C17.1497 16.975 21.6996 16.2751 25.7247 17.85L27.2996 18.725L29.0496 19.9501L26.2496 22.7501L25.1997 22.0502C22.7497 20.4753 19.2496 20.8251 16.9748 23.1002C14.3497 25.7252 14.1748 30.4502 16.9748 33.2502C19.5999 36.0502 24.3249 36.0502 26.7748 33.2502C27.4747 32.5503 28.1748 31.5002 28.3497 30.4502V30.1002H22.0498V26.6003H32.0248L32.1997 27.4753V29.9252C32.0248 32.2003 31.1497 34.4753 29.5746 36.0502C25.3748 40.0749 18.0248 40.0749 13.8248 35.8749Z" fill="white"/>
+                    </svg>                    
+                </a>
+            </div>
+            <p class="text-center">
+                You have no account yet?  <br>
+                <a href="#" class="text-xl text-c-pink underline hover:no-underline">Create new account</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

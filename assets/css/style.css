@@ -961,12 +961,12 @@ a.disabled, a[disabled] {
 }
 
 .tag:hover {
-  background-color: var(--bg-tag-green-hover);
+  background-color: var(--clr-pink);
 }
 
 .tag {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.938rem;
@@ -975,7 +975,8 @@ a.disabled, a[disabled] {
 }
 
 .tag:hover {
-  color: var(--clr-gray-dark);
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 .tag {
@@ -1244,6 +1245,22 @@ a.disabled, a[disabled] {
 
 .form-field.success input, .form-field.success textarea {
   border-color: var(--clr-green);
+}
+
+.nav-mobile-link{
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem
+}
+
+.nav-mobile-sep{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity))
 }
 
 .sr-only {
@@ -15737,6 +15754,341 @@ a.disabled, a[disabled] {
   background-color: var(--bg-tag-green-disabled);
 }
 
+input[type="checkbox"]:checked ~ .label-checked\:bg-transparent {
+  background-color: transparent;
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-current {
+  background-color: currentColor;
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-black {
+  background-color: var(--clr-black);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 242, 242, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(252, 165, 165, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(127, 29, 29, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-green-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(245, 243, 255, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(237, 233, 254, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(221, 214, 254, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(196, 181, 253, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(109, 40, 217, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-purple-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(76, 29, 149, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(253, 242, 248, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(251, 207, 232, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 168, 212, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(244, 114, 182, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(190, 24, 93, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(157, 23, 77, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-pink-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(131, 24, 67, var(--tw-bg-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-dark {
+  background-color: var(--clr-dark);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-dark-hover {
+  background-color: var(--bg-btn-dark-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-dark-disabled {
+  background-color: var(--bg-btn-dark-disabled);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-pink {
+  background-color: var(--clr-pink);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-pink-hover {
+  background-color: var(--bg-btn-pink-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-pink-disabled {
+  background-color: var(--bg-btn-pink-disabled);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-gray-light {
+  background-color: var(--clr-gray-light);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-gray {
+  background-color: var(--clr-gray);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-gray-dark {
+  background-color: var(--clr-gray-dark);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green-light {
+  background-color: var(--clr-green-light);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green {
+  background-color: var(--clr-green);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green-dark {
+  background-color: var(--clr-green-dark);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green-hover {
+  background-color: var(--bg-btn-green-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green-disabled {
+  background-color: var(--bg-btn-green-disabled);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green-tag {
+  background-color: var(--bg-tag-green);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green-tag-hover {
+  background-color: var(--bg-tag-green-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:bg-c-green-tag-disabled {
+  background-color: var(--bg-tag-green-disabled);
+}
+
 .group:hover .group-hover\:bg-transparent {
   background-color: transparent;
 }
@@ -17758,6 +18110,10 @@ a.disabled, a[disabled] {
 
 .bg-watermark {
   background-image: url('/assets/images/gw-watermark.png');
+}
+
+.bg-x {
+  background-image: url('/assets/images/gw-x.png');
 }
 
 .from-transparent {
@@ -22457,6 +22813,341 @@ a.disabled, a[disabled] {
 }
 
 .text-c-green-tag-disabled {
+  color: var(--bg-tag-green-disabled);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-transparent {
+  color: transparent;
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-current {
+  color: currentColor;
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-black {
+  color: var(--clr-black);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-50 {
+  --tw-text-opacity: 1;
+  color: rgba(249, 250, 251, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgba(209, 213, 219, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgba(31, 41, 55, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-50 {
+  --tw-text-opacity: 1;
+  color: rgba(254, 242, 242, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-100 {
+  --tw-text-opacity: 1;
+  color: rgba(254, 226, 226, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-200 {
+  --tw-text-opacity: 1;
+  color: rgba(254, 202, 202, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgba(252, 165, 165, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgba(248, 113, 113, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgba(239, 68, 68, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgba(220, 38, 38, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgba(185, 28, 28, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgba(153, 27, 27, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-red-900 {
+  --tw-text-opacity: 1;
+  color: rgba(127, 29, 29, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-50 {
+  --tw-text-opacity: 1;
+  color: rgba(236, 253, 245, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-100 {
+  --tw-text-opacity: 1;
+  color: rgba(209, 250, 229, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-200 {
+  --tw-text-opacity: 1;
+  color: rgba(167, 243, 208, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-300 {
+  --tw-text-opacity: 1;
+  color: rgba(110, 231, 183, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgba(52, 211, 153, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgba(5, 150, 105, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgba(4, 120, 87, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgba(6, 95, 70, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-green-900 {
+  --tw-text-opacity: 1;
+  color: rgba(6, 78, 59, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-50 {
+  --tw-text-opacity: 1;
+  color: rgba(245, 243, 255, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-100 {
+  --tw-text-opacity: 1;
+  color: rgba(237, 233, 254, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-200 {
+  --tw-text-opacity: 1;
+  color: rgba(221, 214, 254, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-300 {
+  --tw-text-opacity: 1;
+  color: rgba(196, 181, 253, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-400 {
+  --tw-text-opacity: 1;
+  color: rgba(167, 139, 250, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-500 {
+  --tw-text-opacity: 1;
+  color: rgba(139, 92, 246, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-600 {
+  --tw-text-opacity: 1;
+  color: rgba(124, 58, 237, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-700 {
+  --tw-text-opacity: 1;
+  color: rgba(109, 40, 217, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-800 {
+  --tw-text-opacity: 1;
+  color: rgba(91, 33, 182, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-purple-900 {
+  --tw-text-opacity: 1;
+  color: rgba(76, 29, 149, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-50 {
+  --tw-text-opacity: 1;
+  color: rgba(253, 242, 248, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-100 {
+  --tw-text-opacity: 1;
+  color: rgba(252, 231, 243, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-200 {
+  --tw-text-opacity: 1;
+  color: rgba(251, 207, 232, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-300 {
+  --tw-text-opacity: 1;
+  color: rgba(249, 168, 212, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-400 {
+  --tw-text-opacity: 1;
+  color: rgba(244, 114, 182, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-500 {
+  --tw-text-opacity: 1;
+  color: rgba(236, 72, 153, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-600 {
+  --tw-text-opacity: 1;
+  color: rgba(219, 39, 119, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-700 {
+  --tw-text-opacity: 1;
+  color: rgba(190, 24, 93, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-800 {
+  --tw-text-opacity: 1;
+  color: rgba(157, 23, 77, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-pink-900 {
+  --tw-text-opacity: 1;
+  color: rgba(131, 24, 67, var(--tw-text-opacity));
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-dark {
+  color: var(--clr-dark);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-dark-hover {
+  color: var(--bg-btn-dark-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-dark-disabled {
+  color: var(--bg-btn-dark-disabled);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-pink {
+  color: var(--clr-pink);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-pink-hover {
+  color: var(--bg-btn-pink-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-pink-disabled {
+  color: var(--bg-btn-pink-disabled);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-gray-light {
+  color: var(--clr-gray-light);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-gray {
+  color: var(--clr-gray);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-gray-dark {
+  color: var(--clr-gray-dark);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green-light {
+  color: var(--clr-green-light);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green {
+  color: var(--clr-green);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green-dark {
+  color: var(--clr-green-dark);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green-hover {
+  color: var(--bg-btn-green-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green-disabled {
+  color: var(--bg-btn-green-disabled);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green-tag {
+  color: var(--bg-tag-green);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green-tag-hover {
+  color: var(--bg-tag-green-hover);
+}
+
+input[type="checkbox"]:checked ~ .label-checked\:text-c-green-tag-disabled {
   color: var(--bg-tag-green-disabled);
 }
 
@@ -29119,20 +29810,6 @@ a.disabled, a[disabled] {
 .content-none {
   content: none;
 }
-
-/* 
-input:invalid {
-    @apply border-red-400
-}
-
-input:invalid:required {
-    @apply bg-red-50
-}
-
-input:valid {
-    @apply border-c-green
-}
-*/
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -43629,6 +44306,341 @@ input:valid {
     background-color: var(--bg-tag-green-disabled);
   }
 
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-transparent {
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-current {
+    background-color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-black {
+    background-color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 242, 242, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 165, 165, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-red-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(127, 29, 29, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-green-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(245, 243, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(237, 233, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(221, 214, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(196, 181, 253, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(109, 40, 217, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-purple-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(76, 29, 149, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(253, 242, 248, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(251, 207, 232, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 168, 212, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(244, 114, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(190, 24, 93, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(157, 23, 77, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-pink-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(131, 24, 67, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-dark {
+    background-color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-dark-hover {
+    background-color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-dark-disabled {
+    background-color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-pink {
+    background-color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-pink-hover {
+    background-color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-pink-disabled {
+    background-color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-gray-light {
+    background-color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-gray {
+    background-color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-gray-dark {
+    background-color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green-light {
+    background-color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green {
+    background-color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green-dark {
+    background-color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green-hover {
+    background-color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green-disabled {
+    background-color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green-tag {
+    background-color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green-tag-hover {
+    background-color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:bg-c-green-tag-disabled {
+    background-color: var(--bg-tag-green-disabled);
+  }
+
   .group:hover .sm\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -45650,6 +46662,10 @@ input:valid {
 
   .sm\:bg-watermark {
     background-image: url('/assets/images/gw-watermark.png');
+  }
+
+  .sm\:bg-x {
+    background-image: url('/assets/images/gw-x.png');
   }
 
   .sm\:from-transparent {
@@ -50349,6 +51365,341 @@ input:valid {
   }
 
   .sm\:text-c-green-tag-disabled {
+    color: var(--bg-tag-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-transparent {
+    color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-current {
+    color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-black {
+    color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-white {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-50 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 250, 251, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgba(243, 244, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-200 {
+    --tw-text-opacity: 1;
+    color: rgba(229, 231, 235, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 213, 219, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgba(31, 41, 55, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-50 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 242, 242, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-100 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 226, 226, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-200 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 202, 202, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-300 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 165, 165, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-400 {
+    --tw-text-opacity: 1;
+    color: rgba(248, 113, 113, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgba(220, 38, 38, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-700 {
+    --tw-text-opacity: 1;
+    color: rgba(185, 28, 28, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-800 {
+    --tw-text-opacity: 1;
+    color: rgba(153, 27, 27, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-red-900 {
+    --tw-text-opacity: 1;
+    color: rgba(127, 29, 29, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-50 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 253, 245, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-100 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 250, 229, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-200 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 243, 208, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-300 {
+    --tw-text-opacity: 1;
+    color: rgba(110, 231, 183, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-400 {
+    --tw-text-opacity: 1;
+    color: rgba(52, 211, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-600 {
+    --tw-text-opacity: 1;
+    color: rgba(5, 150, 105, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-700 {
+    --tw-text-opacity: 1;
+    color: rgba(4, 120, 87, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-800 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 95, 70, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-green-900 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-50 {
+    --tw-text-opacity: 1;
+    color: rgba(245, 243, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-100 {
+    --tw-text-opacity: 1;
+    color: rgba(237, 233, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-200 {
+    --tw-text-opacity: 1;
+    color: rgba(221, 214, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-300 {
+    --tw-text-opacity: 1;
+    color: rgba(196, 181, 253, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-400 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 139, 250, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-500 {
+    --tw-text-opacity: 1;
+    color: rgba(139, 92, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-600 {
+    --tw-text-opacity: 1;
+    color: rgba(124, 58, 237, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-700 {
+    --tw-text-opacity: 1;
+    color: rgba(109, 40, 217, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-800 {
+    --tw-text-opacity: 1;
+    color: rgba(91, 33, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-purple-900 {
+    --tw-text-opacity: 1;
+    color: rgba(76, 29, 149, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-50 {
+    --tw-text-opacity: 1;
+    color: rgba(253, 242, 248, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-100 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 231, 243, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-200 {
+    --tw-text-opacity: 1;
+    color: rgba(251, 207, 232, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-300 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 168, 212, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-400 {
+    --tw-text-opacity: 1;
+    color: rgba(244, 114, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-500 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 72, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-600 {
+    --tw-text-opacity: 1;
+    color: rgba(219, 39, 119, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-700 {
+    --tw-text-opacity: 1;
+    color: rgba(190, 24, 93, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-800 {
+    --tw-text-opacity: 1;
+    color: rgba(157, 23, 77, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-pink-900 {
+    --tw-text-opacity: 1;
+    color: rgba(131, 24, 67, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-dark {
+    color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-dark-hover {
+    color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-dark-disabled {
+    color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-pink {
+    color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-pink-hover {
+    color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-pink-disabled {
+    color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-gray-light {
+    color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-gray {
+    color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-gray-dark {
+    color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green-light {
+    color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green {
+    color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green-dark {
+    color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green-hover {
+    color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green-disabled {
+    color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green-tag {
+    color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green-tag-hover {
+    color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .sm\:label-checked\:text-c-green-tag-disabled {
     color: var(--bg-tag-green-disabled);
   }
 
@@ -71207,6 +72558,341 @@ input:valid {
     background-color: var(--bg-tag-green-disabled);
   }
 
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-transparent {
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-current {
+    background-color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-black {
+    background-color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 242, 242, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 165, 165, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-red-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(127, 29, 29, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-green-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(245, 243, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(237, 233, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(221, 214, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(196, 181, 253, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(109, 40, 217, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-purple-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(76, 29, 149, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(253, 242, 248, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(251, 207, 232, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 168, 212, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(244, 114, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(190, 24, 93, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(157, 23, 77, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-pink-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(131, 24, 67, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-dark {
+    background-color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-dark-hover {
+    background-color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-dark-disabled {
+    background-color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-pink {
+    background-color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-pink-hover {
+    background-color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-pink-disabled {
+    background-color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-gray-light {
+    background-color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-gray {
+    background-color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-gray-dark {
+    background-color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green-light {
+    background-color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green {
+    background-color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green-dark {
+    background-color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green-hover {
+    background-color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green-disabled {
+    background-color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green-tag {
+    background-color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green-tag-hover {
+    background-color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:bg-c-green-tag-disabled {
+    background-color: var(--bg-tag-green-disabled);
+  }
+
   .group:hover .md\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -73228,6 +74914,10 @@ input:valid {
 
   .md\:bg-watermark {
     background-image: url('/assets/images/gw-watermark.png');
+  }
+
+  .md\:bg-x {
+    background-image: url('/assets/images/gw-x.png');
   }
 
   .md\:from-transparent {
@@ -77927,6 +79617,341 @@ input:valid {
   }
 
   .md\:text-c-green-tag-disabled {
+    color: var(--bg-tag-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-transparent {
+    color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-current {
+    color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-black {
+    color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-white {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-50 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 250, 251, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgba(243, 244, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-200 {
+    --tw-text-opacity: 1;
+    color: rgba(229, 231, 235, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 213, 219, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgba(31, 41, 55, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-50 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 242, 242, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-100 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 226, 226, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-200 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 202, 202, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-300 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 165, 165, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-400 {
+    --tw-text-opacity: 1;
+    color: rgba(248, 113, 113, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgba(220, 38, 38, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-700 {
+    --tw-text-opacity: 1;
+    color: rgba(185, 28, 28, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-800 {
+    --tw-text-opacity: 1;
+    color: rgba(153, 27, 27, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-red-900 {
+    --tw-text-opacity: 1;
+    color: rgba(127, 29, 29, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-50 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 253, 245, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-100 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 250, 229, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-200 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 243, 208, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-300 {
+    --tw-text-opacity: 1;
+    color: rgba(110, 231, 183, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-400 {
+    --tw-text-opacity: 1;
+    color: rgba(52, 211, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-600 {
+    --tw-text-opacity: 1;
+    color: rgba(5, 150, 105, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-700 {
+    --tw-text-opacity: 1;
+    color: rgba(4, 120, 87, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-800 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 95, 70, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-green-900 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-50 {
+    --tw-text-opacity: 1;
+    color: rgba(245, 243, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-100 {
+    --tw-text-opacity: 1;
+    color: rgba(237, 233, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-200 {
+    --tw-text-opacity: 1;
+    color: rgba(221, 214, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-300 {
+    --tw-text-opacity: 1;
+    color: rgba(196, 181, 253, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-400 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 139, 250, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-500 {
+    --tw-text-opacity: 1;
+    color: rgba(139, 92, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-600 {
+    --tw-text-opacity: 1;
+    color: rgba(124, 58, 237, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-700 {
+    --tw-text-opacity: 1;
+    color: rgba(109, 40, 217, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-800 {
+    --tw-text-opacity: 1;
+    color: rgba(91, 33, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-purple-900 {
+    --tw-text-opacity: 1;
+    color: rgba(76, 29, 149, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-50 {
+    --tw-text-opacity: 1;
+    color: rgba(253, 242, 248, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-100 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 231, 243, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-200 {
+    --tw-text-opacity: 1;
+    color: rgba(251, 207, 232, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-300 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 168, 212, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-400 {
+    --tw-text-opacity: 1;
+    color: rgba(244, 114, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-500 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 72, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-600 {
+    --tw-text-opacity: 1;
+    color: rgba(219, 39, 119, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-700 {
+    --tw-text-opacity: 1;
+    color: rgba(190, 24, 93, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-800 {
+    --tw-text-opacity: 1;
+    color: rgba(157, 23, 77, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-pink-900 {
+    --tw-text-opacity: 1;
+    color: rgba(131, 24, 67, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-dark {
+    color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-dark-hover {
+    color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-dark-disabled {
+    color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-pink {
+    color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-pink-hover {
+    color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-pink-disabled {
+    color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-gray-light {
+    color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-gray {
+    color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-gray-dark {
+    color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green-light {
+    color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green {
+    color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green-dark {
+    color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green-hover {
+    color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green-disabled {
+    color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green-tag {
+    color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green-tag-hover {
+    color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .md\:label-checked\:text-c-green-tag-disabled {
     color: var(--bg-tag-green-disabled);
   }
 
@@ -98785,6 +100810,341 @@ input:valid {
     background-color: var(--bg-tag-green-disabled);
   }
 
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-transparent {
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-current {
+    background-color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-black {
+    background-color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 242, 242, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 165, 165, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-red-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(127, 29, 29, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-green-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(245, 243, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(237, 233, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(221, 214, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(196, 181, 253, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(109, 40, 217, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-purple-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(76, 29, 149, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(253, 242, 248, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(251, 207, 232, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 168, 212, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(244, 114, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(190, 24, 93, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(157, 23, 77, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-pink-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(131, 24, 67, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-dark {
+    background-color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-dark-hover {
+    background-color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-dark-disabled {
+    background-color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-pink {
+    background-color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-pink-hover {
+    background-color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-pink-disabled {
+    background-color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-gray-light {
+    background-color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-gray {
+    background-color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-gray-dark {
+    background-color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green-light {
+    background-color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green {
+    background-color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green-dark {
+    background-color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green-hover {
+    background-color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green-disabled {
+    background-color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green-tag {
+    background-color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green-tag-hover {
+    background-color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:bg-c-green-tag-disabled {
+    background-color: var(--bg-tag-green-disabled);
+  }
+
   .group:hover .lg\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -100806,6 +103166,10 @@ input:valid {
 
   .lg\:bg-watermark {
     background-image: url('/assets/images/gw-watermark.png');
+  }
+
+  .lg\:bg-x {
+    background-image: url('/assets/images/gw-x.png');
   }
 
   .lg\:from-transparent {
@@ -105505,6 +107869,341 @@ input:valid {
   }
 
   .lg\:text-c-green-tag-disabled {
+    color: var(--bg-tag-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-transparent {
+    color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-current {
+    color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-black {
+    color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-white {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-50 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 250, 251, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgba(243, 244, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-200 {
+    --tw-text-opacity: 1;
+    color: rgba(229, 231, 235, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 213, 219, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgba(31, 41, 55, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-50 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 242, 242, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-100 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 226, 226, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-200 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 202, 202, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-300 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 165, 165, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-400 {
+    --tw-text-opacity: 1;
+    color: rgba(248, 113, 113, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgba(220, 38, 38, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-700 {
+    --tw-text-opacity: 1;
+    color: rgba(185, 28, 28, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-800 {
+    --tw-text-opacity: 1;
+    color: rgba(153, 27, 27, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-red-900 {
+    --tw-text-opacity: 1;
+    color: rgba(127, 29, 29, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-50 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 253, 245, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-100 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 250, 229, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-200 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 243, 208, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-300 {
+    --tw-text-opacity: 1;
+    color: rgba(110, 231, 183, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-400 {
+    --tw-text-opacity: 1;
+    color: rgba(52, 211, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-600 {
+    --tw-text-opacity: 1;
+    color: rgba(5, 150, 105, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-700 {
+    --tw-text-opacity: 1;
+    color: rgba(4, 120, 87, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-800 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 95, 70, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-green-900 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-50 {
+    --tw-text-opacity: 1;
+    color: rgba(245, 243, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-100 {
+    --tw-text-opacity: 1;
+    color: rgba(237, 233, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-200 {
+    --tw-text-opacity: 1;
+    color: rgba(221, 214, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-300 {
+    --tw-text-opacity: 1;
+    color: rgba(196, 181, 253, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-400 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 139, 250, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-500 {
+    --tw-text-opacity: 1;
+    color: rgba(139, 92, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-600 {
+    --tw-text-opacity: 1;
+    color: rgba(124, 58, 237, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-700 {
+    --tw-text-opacity: 1;
+    color: rgba(109, 40, 217, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-800 {
+    --tw-text-opacity: 1;
+    color: rgba(91, 33, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-purple-900 {
+    --tw-text-opacity: 1;
+    color: rgba(76, 29, 149, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-50 {
+    --tw-text-opacity: 1;
+    color: rgba(253, 242, 248, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-100 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 231, 243, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-200 {
+    --tw-text-opacity: 1;
+    color: rgba(251, 207, 232, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-300 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 168, 212, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-400 {
+    --tw-text-opacity: 1;
+    color: rgba(244, 114, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-500 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 72, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-600 {
+    --tw-text-opacity: 1;
+    color: rgba(219, 39, 119, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-700 {
+    --tw-text-opacity: 1;
+    color: rgba(190, 24, 93, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-800 {
+    --tw-text-opacity: 1;
+    color: rgba(157, 23, 77, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-pink-900 {
+    --tw-text-opacity: 1;
+    color: rgba(131, 24, 67, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-dark {
+    color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-dark-hover {
+    color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-dark-disabled {
+    color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-pink {
+    color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-pink-hover {
+    color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-pink-disabled {
+    color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-gray-light {
+    color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-gray {
+    color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-gray-dark {
+    color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green-light {
+    color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green {
+    color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green-dark {
+    color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green-hover {
+    color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green-disabled {
+    color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green-tag {
+    color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green-tag-hover {
+    color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .lg\:label-checked\:text-c-green-tag-disabled {
     color: var(--bg-tag-green-disabled);
   }
 
@@ -126363,6 +129062,341 @@ input:valid {
     background-color: var(--bg-tag-green-disabled);
   }
 
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-transparent {
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-current {
+    background-color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-black {
+    background-color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 242, 242, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 165, 165, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-red-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(127, 29, 29, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-green-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(245, 243, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(237, 233, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(221, 214, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(196, 181, 253, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(109, 40, 217, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-purple-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(76, 29, 149, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(253, 242, 248, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(251, 207, 232, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 168, 212, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(244, 114, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(190, 24, 93, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(157, 23, 77, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-pink-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(131, 24, 67, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-dark {
+    background-color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-dark-hover {
+    background-color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-dark-disabled {
+    background-color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-pink {
+    background-color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-pink-hover {
+    background-color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-pink-disabled {
+    background-color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-gray-light {
+    background-color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-gray {
+    background-color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-gray-dark {
+    background-color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green-light {
+    background-color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green {
+    background-color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green-dark {
+    background-color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green-hover {
+    background-color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green-disabled {
+    background-color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green-tag {
+    background-color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green-tag-hover {
+    background-color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:bg-c-green-tag-disabled {
+    background-color: var(--bg-tag-green-disabled);
+  }
+
   .group:hover .xl\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -128384,6 +131418,10 @@ input:valid {
 
   .xl\:bg-watermark {
     background-image: url('/assets/images/gw-watermark.png');
+  }
+
+  .xl\:bg-x {
+    background-image: url('/assets/images/gw-x.png');
   }
 
   .xl\:from-transparent {
@@ -133083,6 +136121,341 @@ input:valid {
   }
 
   .xl\:text-c-green-tag-disabled {
+    color: var(--bg-tag-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-transparent {
+    color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-current {
+    color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-black {
+    color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-white {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-50 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 250, 251, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgba(243, 244, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-200 {
+    --tw-text-opacity: 1;
+    color: rgba(229, 231, 235, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 213, 219, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgba(31, 41, 55, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-50 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 242, 242, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-100 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 226, 226, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-200 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 202, 202, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-300 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 165, 165, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-400 {
+    --tw-text-opacity: 1;
+    color: rgba(248, 113, 113, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgba(220, 38, 38, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-700 {
+    --tw-text-opacity: 1;
+    color: rgba(185, 28, 28, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-800 {
+    --tw-text-opacity: 1;
+    color: rgba(153, 27, 27, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-red-900 {
+    --tw-text-opacity: 1;
+    color: rgba(127, 29, 29, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-50 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 253, 245, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-100 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 250, 229, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-200 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 243, 208, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-300 {
+    --tw-text-opacity: 1;
+    color: rgba(110, 231, 183, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-400 {
+    --tw-text-opacity: 1;
+    color: rgba(52, 211, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-600 {
+    --tw-text-opacity: 1;
+    color: rgba(5, 150, 105, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-700 {
+    --tw-text-opacity: 1;
+    color: rgba(4, 120, 87, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-800 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 95, 70, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-green-900 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-50 {
+    --tw-text-opacity: 1;
+    color: rgba(245, 243, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-100 {
+    --tw-text-opacity: 1;
+    color: rgba(237, 233, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-200 {
+    --tw-text-opacity: 1;
+    color: rgba(221, 214, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-300 {
+    --tw-text-opacity: 1;
+    color: rgba(196, 181, 253, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-400 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 139, 250, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-500 {
+    --tw-text-opacity: 1;
+    color: rgba(139, 92, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-600 {
+    --tw-text-opacity: 1;
+    color: rgba(124, 58, 237, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-700 {
+    --tw-text-opacity: 1;
+    color: rgba(109, 40, 217, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-800 {
+    --tw-text-opacity: 1;
+    color: rgba(91, 33, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-purple-900 {
+    --tw-text-opacity: 1;
+    color: rgba(76, 29, 149, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-50 {
+    --tw-text-opacity: 1;
+    color: rgba(253, 242, 248, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-100 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 231, 243, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-200 {
+    --tw-text-opacity: 1;
+    color: rgba(251, 207, 232, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-300 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 168, 212, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-400 {
+    --tw-text-opacity: 1;
+    color: rgba(244, 114, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-500 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 72, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-600 {
+    --tw-text-opacity: 1;
+    color: rgba(219, 39, 119, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-700 {
+    --tw-text-opacity: 1;
+    color: rgba(190, 24, 93, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-800 {
+    --tw-text-opacity: 1;
+    color: rgba(157, 23, 77, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-pink-900 {
+    --tw-text-opacity: 1;
+    color: rgba(131, 24, 67, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-dark {
+    color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-dark-hover {
+    color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-dark-disabled {
+    color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-pink {
+    color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-pink-hover {
+    color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-pink-disabled {
+    color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-gray-light {
+    color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-gray {
+    color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-gray-dark {
+    color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green-light {
+    color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green {
+    color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green-dark {
+    color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green-hover {
+    color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green-disabled {
+    color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green-tag {
+    color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green-tag-hover {
+    color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .xl\:label-checked\:text-c-green-tag-disabled {
     color: var(--bg-tag-green-disabled);
   }
 
@@ -153941,6 +157314,341 @@ input:valid {
     background-color: var(--bg-tag-green-disabled);
   }
 
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-transparent {
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-current {
+    background-color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-black {
+    background-color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 242, 242, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 165, 165, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-red-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(127, 29, 29, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-green-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(245, 243, 255, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(237, 233, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(221, 214, 254, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(196, 181, 253, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(109, 40, 217, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-purple-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(76, 29, 149, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(253, 242, 248, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(251, 207, 232, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 168, 212, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(244, 114, 182, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(190, 24, 93, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(157, 23, 77, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-pink-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(131, 24, 67, var(--tw-bg-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-dark {
+    background-color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-dark-hover {
+    background-color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-dark-disabled {
+    background-color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-pink {
+    background-color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-pink-hover {
+    background-color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-pink-disabled {
+    background-color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-gray-light {
+    background-color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-gray {
+    background-color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-gray-dark {
+    background-color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green-light {
+    background-color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green {
+    background-color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green-dark {
+    background-color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green-hover {
+    background-color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green-disabled {
+    background-color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green-tag {
+    background-color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green-tag-hover {
+    background-color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:bg-c-green-tag-disabled {
+    background-color: var(--bg-tag-green-disabled);
+  }
+
   .group:hover .\32xl\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -155962,6 +159670,10 @@ input:valid {
 
   .\32xl\:bg-watermark {
     background-image: url('/assets/images/gw-watermark.png');
+  }
+
+  .\32xl\:bg-x {
+    background-image: url('/assets/images/gw-x.png');
   }
 
   .\32xl\:from-transparent {
@@ -160661,6 +164373,341 @@ input:valid {
   }
 
   .\32xl\:text-c-green-tag-disabled {
+    color: var(--bg-tag-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-transparent {
+    color: transparent;
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-current {
+    color: currentColor;
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-black {
+    color: var(--clr-black);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-white {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-50 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 250, 251, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgba(243, 244, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-200 {
+    --tw-text-opacity: 1;
+    color: rgba(229, 231, 235, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 213, 219, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgba(31, 41, 55, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-50 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 242, 242, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-100 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 226, 226, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-200 {
+    --tw-text-opacity: 1;
+    color: rgba(254, 202, 202, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-300 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 165, 165, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-400 {
+    --tw-text-opacity: 1;
+    color: rgba(248, 113, 113, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgba(220, 38, 38, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-700 {
+    --tw-text-opacity: 1;
+    color: rgba(185, 28, 28, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-800 {
+    --tw-text-opacity: 1;
+    color: rgba(153, 27, 27, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-red-900 {
+    --tw-text-opacity: 1;
+    color: rgba(127, 29, 29, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-50 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 253, 245, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-100 {
+    --tw-text-opacity: 1;
+    color: rgba(209, 250, 229, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-200 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 243, 208, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-300 {
+    --tw-text-opacity: 1;
+    color: rgba(110, 231, 183, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-400 {
+    --tw-text-opacity: 1;
+    color: rgba(52, 211, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-600 {
+    --tw-text-opacity: 1;
+    color: rgba(5, 150, 105, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-700 {
+    --tw-text-opacity: 1;
+    color: rgba(4, 120, 87, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-800 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 95, 70, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-green-900 {
+    --tw-text-opacity: 1;
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-50 {
+    --tw-text-opacity: 1;
+    color: rgba(245, 243, 255, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-100 {
+    --tw-text-opacity: 1;
+    color: rgba(237, 233, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-200 {
+    --tw-text-opacity: 1;
+    color: rgba(221, 214, 254, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-300 {
+    --tw-text-opacity: 1;
+    color: rgba(196, 181, 253, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-400 {
+    --tw-text-opacity: 1;
+    color: rgba(167, 139, 250, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-500 {
+    --tw-text-opacity: 1;
+    color: rgba(139, 92, 246, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-600 {
+    --tw-text-opacity: 1;
+    color: rgba(124, 58, 237, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-700 {
+    --tw-text-opacity: 1;
+    color: rgba(109, 40, 217, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-800 {
+    --tw-text-opacity: 1;
+    color: rgba(91, 33, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-purple-900 {
+    --tw-text-opacity: 1;
+    color: rgba(76, 29, 149, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-50 {
+    --tw-text-opacity: 1;
+    color: rgba(253, 242, 248, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-100 {
+    --tw-text-opacity: 1;
+    color: rgba(252, 231, 243, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-200 {
+    --tw-text-opacity: 1;
+    color: rgba(251, 207, 232, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-300 {
+    --tw-text-opacity: 1;
+    color: rgba(249, 168, 212, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-400 {
+    --tw-text-opacity: 1;
+    color: rgba(244, 114, 182, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-500 {
+    --tw-text-opacity: 1;
+    color: rgba(236, 72, 153, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-600 {
+    --tw-text-opacity: 1;
+    color: rgba(219, 39, 119, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-700 {
+    --tw-text-opacity: 1;
+    color: rgba(190, 24, 93, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-800 {
+    --tw-text-opacity: 1;
+    color: rgba(157, 23, 77, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-pink-900 {
+    --tw-text-opacity: 1;
+    color: rgba(131, 24, 67, var(--tw-text-opacity));
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-dark {
+    color: var(--clr-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-dark-hover {
+    color: var(--bg-btn-dark-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-dark-disabled {
+    color: var(--bg-btn-dark-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-pink {
+    color: var(--clr-pink);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-pink-hover {
+    color: var(--bg-btn-pink-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-pink-disabled {
+    color: var(--bg-btn-pink-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-gray-light {
+    color: var(--clr-gray-light);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-gray {
+    color: var(--clr-gray);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-gray-dark {
+    color: var(--clr-gray-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green-light {
+    color: var(--clr-green-light);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green {
+    color: var(--clr-green);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green-dark {
+    color: var(--clr-green-dark);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green-hover {
+    color: var(--bg-btn-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green-disabled {
+    color: var(--bg-btn-green-disabled);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green-tag {
+    color: var(--bg-tag-green);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green-tag-hover {
+    color: var(--bg-tag-green-hover);
+  }
+
+  input[type="checkbox"]:checked ~ .\32xl\:label-checked\:text-c-green-tag-disabled {
     color: var(--bg-tag-green-disabled);
   }
 
